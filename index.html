@@ -1,0 +1,2314 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Speaking Studio — Nói chuẩn 5.5 → 6.5+</title>
+<style>
+:root{
+  --violet:#6D28D9;
+  --violet-dark:#5B21B6;
+  --violet-deep:#4C1D95;
+  --violet-soft:#F3EEFF;
+  --violet-light:#DDD0FA;
+  --rose:#F43F5E;
+  --rose-dark:#BE123C;
+  --rose-soft:#FFE4E9;
+  --amber:#F59E0B;
+  --amber-soft:#FEF3C7;
+  --green:#10B981;
+  --green-soft:#D1FAE5;
+  --red:#EF4444;
+  --red-soft:#FEE2E2;
+  --navy:#0B1120;
+  --navy-2:#161E33;
+  --bg:#FAF9FE;
+  --text:#1E1B2E;
+  --muted:#6B7280;
+  --border:#E9E5F5;
+  --shadow:0 8px 30px rgba(76,29,149,.08);
+  --shadow-lg:0 20px 60px rgba(76,29,149,.16);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Segoe UI',system-ui,-apple-system,'Helvetica Neue',Roboto,Arial,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+input,textarea{font-family:inherit}
+
+/* ============ NAV ============ */
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,.93);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{
+  max-width:1240px;margin:0 auto;padding:0 24px;
+  height:70px;display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.12rem;letter-spacing:-.3px;text-decoration:none;color:var(--text)}
+.logo-mark{
+  width:40px;height:40px;border-radius:12px;
+  background:linear-gradient(135deg,var(--violet),var(--violet-deep));
+  color:#fff;display:grid;place-items:center;
+  font-weight:900;font-size:1rem;box-shadow:0 6px 18px rgba(109,40,217,.4);
+}
+.logo span small{display:block;font-size:.63rem;font-weight:600;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase}
+.nav-links{display:flex;gap:4px;list-style:none}
+.nav-links a{
+  text-decoration:none;color:var(--muted);font-weight:600;font-size:.9rem;
+  padding:9px 14px;border-radius:10px;transition:.2s;display:block;
+}
+.nav-links a:hover{color:var(--violet);background:var(--violet-soft)}
+.nav-cta{
+  background:linear-gradient(135deg,var(--violet),var(--violet-dark));color:#fff;font-weight:700;font-size:.9rem;
+  padding:11px 22px;border-radius:11px;transition:.25s;
+  box-shadow:0 8px 20px rgba(109,40,217,.35);
+}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(109,40,217,.45)}
+.burger{display:none;font-size:1.6rem;color:var(--text)}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 480px at 88% -10%, rgba(109,40,217,.18), transparent 60%),
+    radial-gradient(800px 500px at -5% 110%, rgba(244,63,94,.13), transparent 60%),
+    linear-gradient(180deg,#FFFFFF 0%, #F7F5FF 100%);
+  padding:76px 24px 86px;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(rgba(11,17,32,.06) 1px, transparent 1px);
+  background-size:26px 26px;
+  mask-image:linear-gradient(180deg,#000 0%, transparent 75%);
+  pointer-events:none;
+}
+.hero-inner{
+  max-width:1240px;margin:0 auto;position:relative;
+  display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;
+}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--border);
+  padding:8px 16px;border-radius:100px;font-size:.8rem;font-weight:700;
+  color:var(--text);box-shadow:var(--shadow);margin-bottom:22px;
+}
+.badge .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(16,185,129,.15);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{
+  font-size:3rem;line-height:1.1;font-weight:900;letter-spacing:-2px;
+  color:var(--text);margin-bottom:20px;
+}
+.hero h1 .accent{
+  background:linear-gradient(120deg,var(--violet),#A855F7);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero p.lead{font-size:1.05rem;color:var(--muted);max-width:540px;margin-bottom:30px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:15px 28px;border-radius:13px;font-weight:700;font-size:.95rem;
+  transition:.25s;text-decoration:none;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--violet),var(--violet-dark));color:#fff;
+  box-shadow:0 14px 34px rgba(109,40,217,.35);
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(109,40,217,.45)}
+.btn-ghost{
+  background:#fff;color:var(--text);border:1.5px solid var(--border);
+  box-shadow:var(--shadow);
+}
+.btn-ghost:hover{border-color:var(--rose);color:var(--rose)}
+
+/* Hero card */
+.hero-card{
+  background:#fff;border-radius:24px;padding:28px;
+  box-shadow:var(--shadow-lg);border:1px solid var(--border);
+  position:relative;
+}
+.hero-card h4{font-size:.75rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:18px;font-weight:800}
+.mic-preview{
+  display:flex;align-items:center;gap:16px;margin-bottom:20px;
+  padding:18px;background:linear-gradient(135deg,var(--violet-soft),#F8F5FF);
+  border-radius:14px;border:1px solid var(--violet-light);
+}
+.mic-ring{
+  width:54px;height:54px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--violet),var(--violet-deep));
+  color:#fff;display:grid;place-items:center;font-size:1.3rem;
+  box-shadow:0 8px 20px rgba(109,40,217,.4);
+  animation:micPulse 2.2s infinite;
+}
+@keyframes micPulse{
+  0%,100%{box-shadow:0 8px 20px rgba(109,40,217,.4);transform:scale(1)}
+  50%{box-shadow:0 8px 32px rgba(109,40,217,.75);transform:scale(1.05)}
+}
+.mic-preview p{font-size:.85rem;font-weight:700;color:var(--violet-deep)}
+.mic-preview p small{display:block;font-weight:500;color:var(--muted);font-size:.75rem;margin-top:2px}
+
+.skill-bars{display:flex;flex-direction:column;gap:14px}
+.skill-bar-item .top{display:flex;justify-content:space-between;font-size:.82rem;font-weight:700;margin-bottom:6px;color:var(--text)}
+.skill-bar-item .top span:last-child{color:var(--violet)}
+.track{height:8px;background:#EEECF8;border-radius:100px;overflow:hidden}
+.fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--violet),#A855F7);width:0;transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+
+/* ============ STATS ============ */
+.stats{
+  max-width:1240px;margin:-40px auto 0;padding:0 24px;position:relative;z-index:5;
+}
+.stats-grid{
+  background:#fff;border-radius:20px;box-shadow:var(--shadow-lg);
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--border);overflow:hidden;
+}
+.stat{padding:26px 24px;text-align:center;border-right:1px solid var(--border)}
+.stat:last-child{border-right:none}
+.stat b{display:block;font-size:1.9rem;font-weight:900;color:var(--text);letter-spacing:-1px}
+.stat b em{color:var(--rose);font-style:normal}
+.stat span{font-size:.82rem;color:var(--muted);font-weight:600}
+
+/* ============ SECTION ============ */
+.section{max-width:1240px;margin:0 auto;padding:84px 24px}
+.section-head{text-align:center;max-width:700px;margin:0 auto 50px}
+.eyebrow{
+  display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:2px;
+  text-transform:uppercase;color:var(--rose);margin-bottom:14px;
+}
+.section-head h2{font-size:2.25rem;font-weight:900;letter-spacing:-1.2px;color:var(--text);margin-bottom:14px}
+.section-head p{color:var(--muted);font-size:1rem}
+
+/* ============ ROADMAP ============ */
+.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.phase{
+  background:#fff;border-radius:20px;padding:28px 24px;
+  border:1px solid var(--border);box-shadow:var(--shadow);
+  position:relative;transition:.3s;overflow:hidden;
+}
+.phase::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--violet),#A855F7);
+  transform:scaleX(0);transform-origin:left;transition:.4s;
+}
+.phase:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--violet-light)}
+.phase:hover::before{transform:scaleX(1)}
+.phase-num{
+  width:44px;height:44px;border-radius:13px;display:grid;place-items:center;
+  background:var(--violet-soft);color:var(--violet);font-weight:900;font-size:1.1rem;
+  margin-bottom:18px;
+}
+.phase h3{font-size:1.05rem;font-weight:800;color:var(--text);margin-bottom:6px}
+.phase .weeks{font-size:.76rem;font-weight:700;color:var(--rose);letter-spacing:.5px;margin-bottom:14px;display:block}
+.phase ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.phase li{font-size:.84rem;color:var(--muted);display:flex;gap:9px;align-items:flex-start;line-height:1.5}
+.phase li::before{content:'✓';color:var(--green);font-weight:900;flex-shrink:0;font-size:.85rem}
+
+/* ============ SPEAKING LAB ============ */
+.lab-wrap{
+  background:linear-gradient(180deg,var(--navy) 0%, var(--navy-2) 100%);
+  border-radius:30px;padding:8px;box-shadow:var(--shadow-lg);
+}
+.lab-inner{background:#fff;border-radius:24px;overflow:hidden}
+.lab-tabs{
+  display:flex;gap:4px;padding:14px;border-bottom:1px solid var(--border);
+  overflow-x:auto;background:#FBF9FF;
+}
+.lab-tab{
+  padding:12px 20px;border-radius:12px;font-weight:800;font-size:.85rem;
+  color:var(--muted);white-space:nowrap;transition:.22s;
+  display:flex;align-items:center;gap:10px;
+}
+.lab-tab:hover{background:#F1EEFB;color:var(--text)}
+.lab-tab.active{background:var(--violet);color:#fff;box-shadow:0 8px 20px rgba(109,40,217,.3)}
+.lab-tab .badge-num{
+  display:inline-grid;place-items:center;width:24px;height:24px;
+  border-radius:7px;background:rgba(255,255,255,.2);font-size:.72rem;
+}
+.lab-tab.active .badge-num{background:rgba(255,255,255,.25)}
+
+.lab-body{padding:28px 32px}
+.panel{display:none}
+.panel.active{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+.panel-head{
+  display:flex;justify-content:space-between;align-items:flex-start;gap:20px;
+  flex-wrap:wrap;margin-bottom:22px;
+}
+.panel-head h3{font-size:1.3rem;font-weight:900;color:var(--text);letter-spacing:-.5px;margin-bottom:5px}
+.panel-head p{font-size:.85rem;color:var(--muted)}
+
+/* Timer */
+.timer-box{
+  background:var(--bg);border:1px solid var(--border);border-radius:14px;
+  padding:12px 18px;min-width:210px;
+}
+.timer-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.timer-top span{font-size:.68rem;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
+.timer-time{font-size:1.35rem;font-weight:900;font-variant-numeric:tabular-nums;color:var(--text);letter-spacing:-.5px}
+.timer-time.warn{color:var(--red);animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.4}}
+.timer-track{height:5px;background:#E6E3F2;border-radius:100px;overflow:hidden;margin-bottom:6px}
+.timer-fill{height:100%;background:linear-gradient(90deg,var(--green),#34D399);border-radius:100px;transition:width 1s linear;width:100%}
+.timer-fill.warn{background:linear-gradient(90deg,var(--red),#F87171)}
+
+/* Question card */
+.q-card{
+  background:linear-gradient(135deg,#FBF8FF,#F5F0FF);
+  border:1px solid var(--violet-light);border-radius:18px;
+  padding:24px 28px;margin-bottom:20px;position:relative;overflow:hidden;
+}
+.q-card::before{
+  content:'';position:absolute;width:160px;height:160px;border-radius:50%;
+  background:radial-gradient(circle,rgba(109,40,217,.08),transparent 70%);
+  right:-40px;top:-40px;
+}
+.q-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;position:relative;z-index:1;flex-wrap:wrap;gap:10px}
+.q-tag{
+  display:inline-block;background:var(--violet);color:#fff;font-size:.66rem;font-weight:800;
+  letter-spacing:1.2px;text-transform:uppercase;padding:5px 12px;border-radius:100px;
+}
+.qnav{display:flex;align-items:center;gap:8px}
+.qnav-btn{
+  width:30px;height:30px;border-radius:9px;background:#fff;border:1.5px solid var(--border);
+  display:grid;place-items:center;font-weight:900;color:var(--text);transition:.2s;font-size:.85rem;
+}
+.qnav-btn:hover{border-color:var(--violet);color:var(--violet)}
+.qnav span{font-size:.75rem;font-weight:800;color:var(--muted);min-width:56px;text-align:center}
+.q-card h4{
+  font-size:1.25rem;font-weight:800;color:var(--text);line-height:1.45;
+  position:relative;z-index:1;
+}
+.q-card ul{list-style:none;margin-top:14px;position:relative;z-index:1}
+.q-card ul li{
+  font-size:.9rem;color:#4A5568;padding-left:22px;position:relative;margin-bottom:7px;
+}
+.q-card ul li::before{content:'▸';position:absolute;left:0;color:var(--violet);font-weight:900}
+.q-card ul li:last-child{margin-bottom:0}
+
+/* Prep bar */
+.prep-bar{
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  background:#FFF8E7;border:1px solid #FDE68A;border-radius:12px;
+  padding:12px 18px;margin-bottom:20px;
+}
+.prep-bar .prep-icon{font-size:1.05rem}
+.prep-bar .prep-label{font-size:.8rem;font-weight:800;color:#92400E;text-transform:uppercase;letter-spacing:.6px}
+.prep-bar .prep-time{
+  font-size:1.2rem;font-weight:900;color:#78350F;font-variant-numeric:tabular-nums;
+  letter-spacing:-.5px;min-width:60px;
+}
+.prep-bar .prep-time.warn{color:var(--red)}
+.btn-prep-sm{
+  padding:7px 16px;border-radius:8px;font-size:.75rem;font-weight:800;
+  background:var(--amber);color:#fff;transition:.2s;
+}
+.btn-prep-sm:hover{background:#D97706}
+.btn-prep-sm.running{background:var(--red)}
+
+/* Speak controls */
+.speak-controls{
+  display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:16px;
+}
+.btn-model, .btn-reveal{
+  background:#fff;color:var(--violet);border:1.5px solid var(--violet);
+  padding:12px 20px;border-radius:11px;font-weight:800;font-size:.85rem;
+  display:inline-flex;align-items:center;gap:8px;transition:.2s;
+}
+.btn-model:hover, .btn-reveal:hover{background:var(--violet);color:#fff}
+.btn-reveal{color:var(--rose);border-color:var(--rose)}
+.btn-reveal:hover{background:var(--rose);color:#fff}
+
+.btn-record{
+  background:linear-gradient(135deg,var(--violet),var(--violet-deep));color:#fff;
+  padding:13px 28px;border-radius:11px;font-weight:800;font-size:.9rem;
+  display:inline-flex;align-items:center;gap:10px;transition:.25s;
+  box-shadow:0 10px 26px rgba(109,40,217,.4);
+}
+.btn-record:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(109,40,217,.5)}
+.btn-record.recording{
+  background:linear-gradient(135deg,var(--red),#B91C1C);
+  box-shadow:0 10px 26px rgba(239,68,68,.4);
+  animation:recPulse 1.4s infinite;
+}
+@keyframes recPulse{
+  0%,100%{box-shadow:0 10px 26px rgba(239,68,68,.4)}
+  50%{box-shadow:0 10px 44px rgba(239,68,68,.8)}
+}
+
+.rec-indicator{
+  display:none;align-items:center;gap:10px;padding:10px 16px;margin-bottom:14px;
+  background:var(--red-soft);border-radius:100px;border:1px solid #FECACA;
+  width:fit-content;
+}
+.rec-indicator.show{display:inline-flex}
+.rec-indicator .rec-dot{
+  width:10px;height:10px;border-radius:50%;background:var(--red);
+  animation:recDot 1s infinite;
+}
+@keyframes recDot{0%,100%{opacity:1}50%{opacity:.25}}
+.rec-indicator span{font-size:.8rem;font-weight:700;color:var(--red)}
+
+.live-transcript{
+  display:none;background:#FBF9FF;border:1px dashed var(--violet-light);
+  border-radius:12px;padding:14px 18px;margin-bottom:16px;
+  font-size:.88rem;line-height:1.7;color:#4A5568;min-height:48px;
+}
+.live-transcript.show{display:block}
+.live-transcript .lt-label{
+  font-size:.66rem;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;
+  color:var(--violet);display:block;margin-bottom:6px;
+}
+.live-transcript .lt-text{color:var(--text)}
+.live-transcript .lt-interim{color:var(--muted);font-style:italic}
+
+/* Sample box */
+.sample-box{
+  display:none;background:var(--green-soft);border:1px solid #A7F3D0;
+  border-radius:14px;padding:20px 24px;margin-bottom:20px;
+  animation:fade .3s ease;
+}
+.sample-box.show{display:block}
+.sample-box .sb-head{
+  display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;
+}
+.sample-box .sb-head h5{
+  font-size:.72rem;font-weight:900;letter-spacing:1.2px;text-transform:uppercase;color:#065F46;
+}
+.band-badge{
+  padding:4px 12px;border-radius:100px;font-size:.7rem;font-weight:900;letter-spacing:.5px;
+}
+.band-6{background:#FEF3C7;color:#92400E}
+.band-65{background:#DBEAFE;color:#1E40AF}
+.band-7{background:#D1FAE5;color:#065F46}
+.sample-box .sb-text{
+  font-size:.92rem;line-height:1.85;color:#064E3B;font-style:italic;
+  border-left:3px solid var(--green);padding-left:16px;
+}
+
+/* ============ AI FEEDBACK ============ */
+.ai-feedback{display:none;margin-top:24px}
+.ai-feedback.show{display:block;animation:fade .4s ease}
+
+.loading-box{
+  display:none;align-items:center;gap:16px;padding:24px 28px;
+  background:var(--violet-soft);border-radius:16px;border:1px solid var(--violet-light);
+}
+.loading-box.show{display:flex}
+.spinner{
+  width:26px;height:26px;border-radius:50%;flex-shrink:0;
+  border:3px solid var(--violet-light);border-top-color:var(--violet);
+  animation:spin .8s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-box p{font-size:.9rem;font-weight:700;color:var(--violet-deep)}
+
+.fb-card{
+  border:1px solid var(--border);border-radius:20px;overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.fb-hero{
+  display:flex;align-items:center;gap:28px;padding:28px;
+  background:linear-gradient(135deg,var(--violet-soft),#F8F5FF);
+  border-bottom:1px solid var(--violet-light);flex-wrap:wrap;
+}
+.band-ring{
+  width:120px;height:120px;border-radius:50%;flex-shrink:0;
+  display:grid;place-items:center;position:relative;
+  background:conic-gradient(var(--c,var(--violet)) calc(var(--p,70) * 1%), #E9E5F5 0);
+  transition:.6s;
+}
+.band-ring::after{content:'';position:absolute;inset:11px;background:#fff;border-radius:50%}
+.band-ring > div{position:relative;z-index:1;text-align:center}
+.band-ring b{display:block;font-size:2.1rem;font-weight:900;color:var(--text);letter-spacing:-1.5px;line-height:1}
+.band-ring small{font-size:.55rem;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
+.fb-hero-text h3{font-size:1.25rem;font-weight:900;color:var(--text);letter-spacing:-.5px;margin-bottom:6px}
+.fb-hero-text p{font-size:.86rem;color:var(--muted);max-width:520px}
+
+.crit-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  border-bottom:1px solid var(--border);
+}
+.crit{padding:18px 14px;text-align:center;border-right:1px solid var(--border)}
+.crit:last-child{border-right:none}
+.crit .cname{font-size:.62rem;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;line-height:1.3}
+.crit .cscore{font-size:1.35rem;font-weight:900;color:var(--text);letter-spacing:-.5px;margin-bottom:8px}
+.crit .cbar{height:5px;background:#EEECF8;border-radius:100px;overflow:hidden}
+.crit .cfill{height:100%;border-radius:100px;width:0;transition:width 1s cubic-bezier(.2,.8,.2,1)}
+
+.stats-row{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  border-bottom:1px solid var(--border);background:#FBF9FF;
+}
+.stat-cell{padding:14px;text-align:center;border-right:1px solid var(--border)}
+.stat-cell:last-child{border-right:none}
+.stat-cell b{display:block;font-size:1.1rem;font-weight:900;color:var(--text)}
+.stat-cell span{font-size:.65rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px}
+
+.fb-section{padding:22px 28px;border-bottom:1px solid var(--border)}
+.fb-section:last-child{border-bottom:none}
+.fb-section h4{
+  font-size:.9rem;font-weight:900;color:var(--text);margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;
+}
+.fb-section h4 .ico{
+  width:26px;height:26px;border-radius:8px;display:grid;place-items:center;font-size:.82rem;
+}
+.ico-good{background:var(--green-soft);color:#065F46}
+.ico-warn{background:var(--amber-soft);color:#B45309}
+.ico-tip{background:var(--violet-soft);color:var(--violet)}
+.ico-info{background:#DBEAFE;color:#1E40AF}
+
+.fb-list{display:flex;flex-direction:column;gap:9px}
+.fb-item{
+  display:flex;gap:12px;align-items:flex-start;font-size:.86rem;color:#475569;line-height:1.65;
+  padding:11px 15px;border-radius:10px;background:#FBF9FF;border:1px solid #EEECF8;
+}
+.fb-item .bullet{flex-shrink:0;font-weight:900;font-size:.85rem;margin-top:1px}
+.b-good{color:#059669}
+.b-warn{color:#B45309}
+.b-tip{color:var(--violet)}
+.fb-item strong{color:var(--text)}
+.fb-item code{
+  background:#F1EEFB;padding:2px 7px;border-radius:5px;font-size:.82rem;
+  font-family:ui-monospace,Menlo,Consolas,monospace;color:var(--violet-deep);font-weight:700;
+}
+
+.transcript-box{
+  background:#FBF9FF;border:1px solid var(--border);border-radius:12px;
+  padding:18px 22px;font-size:.9rem;line-height:1.85;color:#334155;
+  max-height:280px;overflow-y:auto;
+}
+.transcript-box mark.filler{
+  background:#FEF3C7;color:#92400E;border-bottom:2px solid var(--amber);
+  padding:1px 4px;border-radius:4px;font-weight:700;
+}
+
+/* ============ SAMPLES SECTION ============ */
+.samples-list{display:flex;flex-direction:column;gap:16px}
+.sample-item{
+  background:#fff;border-radius:18px;border:1px solid var(--border);
+  box-shadow:var(--shadow);overflow:hidden;transition:.3s;
+}
+.sample-item:hover{box-shadow:var(--shadow-lg)}
+.sample-head{
+  display:flex;align-items:center;gap:16px;padding:22px 26px;
+  cursor:pointer;transition:.2s;flex-wrap:wrap;
+}
+.sample-head:hover{background:#FBF9FF}
+.sample-head h4{font-size:1rem;font-weight:800;color:var(--text);flex:1;min-width:200px}
+.sample-meta{display:flex;gap:14px;font-size:.75rem;font-weight:700;color:var(--muted)}
+.sample-toggle{
+  width:32px;height:32px;border-radius:9px;background:var(--bg);
+  display:grid;place-items:center;color:var(--text);font-weight:900;
+  transition:.3s;flex-shrink:0;font-size:.9rem;
+}
+.sample-item.open .sample-toggle{transform:rotate(180deg);background:var(--violet-soft);color:var(--violet)}
+.sample-body{display:none;padding:0 26px 26px}
+.sample-item.open .sample-body{display:block;animation:fade .3s ease}
+.sample-question{
+  background:var(--violet-soft);border-left:4px solid var(--violet);border-radius:10px;
+  padding:14px 18px;font-size:.88rem;font-weight:700;color:var(--violet-deep);
+  margin-bottom:16px;
+}
+.sample-answer{
+  background:#FBF9FF;border:1px solid var(--border);border-radius:12px;
+  padding:22px 26px;font-size:.92rem;line-height:1.95;color:#334155;
+  margin-bottom:16px;font-style:italic;
+}
+.sample-answer .mk{
+  display:inline-grid;place-items:center;width:19px;height:19px;border-radius:50%;
+  background:var(--violet);color:#fff;font-size:.62rem;font-weight:900;
+  vertical-align:super;margin:0 2px;line-height:1;font-style:normal;
+}
+.anno-list{display:flex;flex-direction:column;gap:9px}
+.anno{
+  display:flex;gap:12px;align-items:flex-start;font-size:.84rem;color:#475569;line-height:1.65;
+  background:var(--violet-soft);padding:12px 16px;border-radius:10px;
+}
+.anno .n{
+  flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--violet);
+  color:#fff;display:grid;place-items:center;font-size:.7rem;font-weight:900;
+}
+.anno strong{color:var(--text)}
+
+/* ============ PHRASE BANK ============ */
+.phrase-tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.ptab{
+  padding:9px 18px;border-radius:100px;font-size:.82rem;font-weight:800;
+  background:#fff;border:1.5px solid var(--border);color:var(--muted);transition:.22s;
+}
+.ptab:hover{border-color:var(--violet);color:var(--violet)}
+.ptab.active{background:var(--violet);border-color:var(--violet);color:#fff;box-shadow:0 8px 20px rgba(109,40,217,.28)}
+
+.phrase-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.phrase-card{
+  background:#fff;border:1px solid var(--border);border-radius:14px;
+  padding:18px 20px;transition:.25s;cursor:pointer;position:relative;
+  box-shadow:0 2px 8px rgba(76,29,149,.04);
+}
+.phrase-card:hover{border-color:var(--violet);transform:translateY(-3px);box-shadow:0 10px 26px rgba(109,40,217,.14)}
+.phrase-card .en{font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:6px;line-height:1.5}
+.phrase-card .vi{font-size:.8rem;color:var(--muted);line-height:1.55}
+.phrase-card .copy-hint{
+  position:absolute;top:12px;right:14px;font-size:.62rem;font-weight:800;
+  color:var(--violet);opacity:0;transition:.2s;letter-spacing:.5px;
+}
+.phrase-card:hover .copy-hint{opacity:1}
+
+/* ============ MISTAKES ============ */
+.mistakes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.mistake{
+  background:#fff;border:1px solid var(--border);border-radius:16px;padding:22px;
+  box-shadow:0 2px 10px rgba(76,29,149,.05);transition:.25s;
+}
+.mistake:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.mistake .wrong{
+  font-size:.86rem;font-weight:700;color:var(--rose-dark);background:var(--rose-soft);
+  padding:9px 13px;border-radius:9px;margin-bottom:10px;text-decoration:line-through;
+  text-decoration-color:rgba(190,18,60,.4);
+}
+.mistake .right{
+  font-size:.86rem;font-weight:700;color:#065F46;background:var(--green-soft);
+  padding:9px 13px;border-radius:9px;margin-bottom:12px;
+}
+.mistake p{font-size:.8rem;color:var(--muted);line-height:1.6}
+
+/* ============ PROGRESS ============ */
+.progress-card{
+  background:#fff;border-radius:24px;padding:36px;border:1px solid var(--border);
+  box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1.4fr;gap:44px;align-items:center;
+}
+.band-visual{text-align:center}
+.band-visual .big{
+  font-size:4.6rem;font-weight:900;letter-spacing:-4px;line-height:1;
+  background:linear-gradient(135deg,var(--violet),#A855F7);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.band-visual .cap{font-size:.85rem;font-weight:700;color:var(--muted);margin-top:8px}
+.band-visual .pill{
+  display:inline-block;margin-top:16px;background:var(--green-soft);color:#065F46;
+  font-size:.78rem;font-weight:800;padding:7px 16px;border-radius:100px;
+}
+.p-list{display:flex;flex-direction:column;gap:18px}
+.p-item .top{display:flex;justify-content:space-between;font-size:.86rem;font-weight:700;margin-bottom:8px;color:var(--text)}
+.p-item .top em{font-style:normal;color:var(--muted);font-weight:600;font-size:.8rem}
+.p-track{height:10px;background:#EEECF8;border-radius:100px;overflow:hidden}
+.p-fill{height:100%;border-radius:100px;width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+
+/* ============ CTA / FOOTER ============ */
+.cta{max-width:1240px;margin:0 auto 84px;padding:0 24px}
+.cta-box{
+  background:linear-gradient(135deg,var(--navy),var(--navy-2));
+  border-radius:28px;padding:60px 48px;text-align:center;position:relative;overflow:hidden;
+}
+.cta-box::before{
+  content:'';position:absolute;width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle,rgba(109,40,217,.6),transparent 70%);
+  top:-180px;right:-100px;
+}
+.cta-box::after{
+  content:'';position:absolute;width:300px;height:300px;border-radius:50%;
+  background:radial-gradient(circle,rgba(244,63,94,.4),transparent 70%);
+  bottom:-150px;left:-80px;
+}
+.cta-box > *{position:relative;z-index:1}
+.cta-box h2{font-size:2.15rem;font-weight:900;color:#fff;letter-spacing:-1px;margin-bottom:14px}
+.cta-box p{color:#A8B6CC;max-width:520px;margin:0 auto 30px;font-size:1rem}
+
+footer{background:var(--navy);color:#8FA2BD;padding:52px 24px 30px}
+.foot-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
+.foot-brand .logo{color:#fff;margin-bottom:16px}
+.foot-brand p{font-size:.85rem;line-height:1.75;max-width:300px}
+.foot-col h5{color:#fff;font-size:.82rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:18px}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.foot-col a{color:#8FA2BD;text-decoration:none;font-size:.85rem;transition:.2s}
+.foot-col a:hover{color:var(--violet-light)}
+.foot-bottom{
+  max-width:1240px;margin:38px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.09);
+  text-align:center;font-size:.78rem;
+}
+
+/* ============ TOAST ============ */
+.toast{
+  position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(120px);
+  background:var(--navy);color:#fff;padding:14px 26px;border-radius:13px;
+  font-size:.88rem;font-weight:700;box-shadow:0 16px 40px rgba(11,17,32,.4);
+  z-index:999;transition:transform .35s cubic-bezier(.2,.8,.2,1);
+  display:flex;align-items:center;gap:10px;pointer-events:none;max-width:90vw;
+}
+.toast.show{transform:translateX(-50%) translateY(0)}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .hero h1{font-size:2.5rem}
+  .roadmap{grid-template-columns:repeat(2,1fr)}
+  .mistakes-grid{grid-template-columns:repeat(2,1fr)}
+  .crit-grid{grid-template-columns:repeat(2,1fr)}
+  .crit:nth-child(2){border-right:none}
+  .crit:nth-child(1),.crit:nth-child(2){border-bottom:1px solid var(--border)}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .stat-cell:nth-child(2){border-right:none}
+  .stat-cell:nth-child(1),.stat-cell:nth-child(2){border-bottom:1px solid var(--border)}
+  .progress-card{grid-template-columns:1fr;gap:32px;text-align:center}
+  .foot-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .burger{display:block}
+  .hero{padding:52px 20px 64px}
+  .hero h1{font-size:2rem;letter-spacing:-1px}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:none}
+  .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--border)}
+  .section{padding:60px 20px}
+  .section-head h2{font-size:1.65rem}
+  .roadmap{grid-template-columns:1fr}
+  .mistakes-grid{grid-template-columns:1fr}
+  .phrase-grid{grid-template-columns:1fr}
+  .lab-body{padding:20px 18px}
+  .q-card{padding:20px 22px}
+  .q-card h4{font-size:1.08rem}
+  .sample-head{padding:18px}
+  .sample-body{padding:0 18px 20px}
+  .fb-hero{padding:22px;gap:20px}
+  .band-ring{width:104px;height:104px}
+  .band-ring b{font-size:1.8rem}
+  .fb-section{padding:20px 18px}
+  .cta-box{padding:42px 22px}
+  .cta-box h2{font-size:1.55rem}
+  .foot-inner{grid-template-columns:1fr}
+  .progress-card{padding:26px}
+  .band-visual .big{font-size:3.4rem}
+  .lab-tab{padding:10px 14px;font-size:.8rem}
+  .speak-controls{gap:8px}
+  .btn-model,.btn-reveal{padding:10px 14px;font-size:.78rem}
+  .btn-record{padding:11px 18px;font-size:.82rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-mark">S</div>
+      <span>Speaking Studio<small>IELTS 5.5 → 6.5+</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#roadmap">Lộ trình</a></li>
+      <li><a href="#lab">Phòng luyện nói</a></li>
+      <li><a href="#samples">Bài mẫu</a></li>
+      <li><a href="#phrases">Mẫu câu</a></li>
+      <li><a href="#progress">Tiến độ</a></li>
+    </ul>
+    <a href="#lab" class="nav-cta">Luyện nói ngay</a>
+    <button class="burger" onclick="document.getElementById('lab').scrollIntoView()">☰</button>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="badge"><span class="dot"></span> AI Speaking Coach · Nhận diện giọng nói</div>
+      <h1>Nói chuẩn IELTS, <span class="accent">AI sửa lỗi</span> từng câu</h1>
+      <p class="lead">
+        Luyện 3 phần thi Speaking với đề mẫu chuẩn IELTS, đồng hồ tính giờ như phòng thi thật,
+        và AI nhận diện giọng nói để chỉ ra lỗi phát âm, ngữ pháp, từ vựng và độ trôi chảy.
+      </p>
+      <div class="hero-actions">
+        <a href="#lab" class="btn btn-primary">🎤 Bắt đầu luyện nói</a>
+        <a href="#samples" class="btn btn-ghost">📖 Xem bài mẫu</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h4>Tiến độ của bạn</h4>
+      <div class="mic-preview">
+        <div class="mic-ring">🎤</div>
+        <p>AI Speaking Coach<small>Nhận diện giọng nói · Chấm điểm 4 tiêu chí</small></p>
+      </div>
+      <div class="skill-bars">
+        <div class="skill-bar-item">
+          <div class="top"><span>Part 1 · Interview</span><span id="hero-pct-p1">0%</span></div>
+          <div class="track"><div class="fill" id="hero-bar-p1"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="top"><span>Part 2 · Cue Card</span><span id="hero-pct-p2">0%</span></div>
+          <div class="track"><div class="fill" id="hero-bar-p2"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="top"><span>Part 3 · Discussion</span><span id="hero-pct-p3">0%</span></div>
+          <div class="track"><div class="fill" id="hero-bar-p3"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="top"><span>Pronunciation</span><span id="hero-pct-pron">0%</span></div>
+          <div class="track"><div class="fill" id="hero-bar-pron" style="background:linear-gradient(90deg,var(--rose),#FB7185)"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= STATS ================= -->
+<div class="stats">
+  <div class="stats-grid">
+    <div class="stat"><b>3</b><span>Phần thi Speaking</span></div>
+    <div class="stat"><b>12<em>+</em></b><span>Đề mẫu có sẵn</span></div>
+    <div class="stat"><b>AI</b><span>Sửa lỗi phát âm &amp; ngữ pháp</span></div>
+    <div class="stat"><b>100<em>%</em></b><span>Chuẩn format IELTS</span></div>
+  </div>
+</div>
+
+<!-- ================= ROADMAP ================= -->
+<section class="section" id="roadmap">
+  <div class="section-head">
+    <span class="eyebrow">Lộ trình luyện nói</span>
+    <h2>8 tuần từ 5.5 lên 6.5+</h2>
+    <p>Lộ trình tập trung vào 4 yếu tố quyết định band Speaking: phát âm, trôi chảy, từ vựng và phát triển ý.</p>
+  </div>
+
+  <div class="roadmap">
+    <div class="phase">
+      <div class="phase-num">01</div>
+      <h3>Phát âm &amp; nền tảng</h3>
+      <span class="weeks">TUẦN 1 – 2</span>
+      <ul>
+        <li>Luyện 44 âm IPA và trọng âm từ</li>
+        <li>Nói quen với các chủ đề Part 1 cơ bản</li>
+        <li>Học 200 cụm từ giao tiếp thường gặp</li>
+        <li>Tập trả lời 2–3 câu cho mỗi câu hỏi</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="phase-num">02</div>
+      <h3>Mở rộng câu trả lời</h3>
+      <span class="weeks">TUẦN 3 – 4</span>
+      <ul>
+        <li>Kỹ thuật AREA: Answer – Reason – Example – Alternative</li>
+        <li>Luyện Part 1 với 5–6 câu trả lời</li>
+        <li>Bắt đầu làm quen Part 2 cue card</li>
+        <li>Giảm từ đệm (um, uh, like)</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="phase-num">03</div>
+      <h3>Phát triển ý tưởng</h3>
+      <span class="weeks">TUẦN 5 – 6</span>
+      <ul>
+        <li>Part 2: nói liên tục 2 phút không ngắt</li>
+        <li>Part 3: đưa quan điểm + lý do + ví dụ</li>
+        <li>Dùng linking words tự nhiên</li>
+        <li>Mở rộng vốn từ học thuật band 6.5</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="phase-num">04</div>
+      <h3>Thi thử &amp; tinh chỉnh</h3>
+      <span class="weeks">TUẦN 7 – 8</span>
+      <ul>
+        <li>Full mock test 3 phần dưới áp lực thời gian</li>
+        <li>Nghe lại bản ghi, sửa lỗi lặp lại</li>
+        <li>Tối ưu ngữ điệu và trọng âm câu</li>
+        <li>Luyện tâm lý tự tin trước giám khảo</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SPEAKING LAB ================= -->
+<section class="section" id="lab" style="padding-top:0">
+  <div class="section-head">
+    <span class="eyebrow">Phòng luyện nói tương tác</span>
+    <h2>3 phần thi Speaking chuẩn IELTS</h2>
+    <p>Chọn phần thi, bấm ghi âm và nói. AI sẽ nhận diện giọng nói, chấm điểm và chỉ ra lỗi sai chi tiết.</p>
+  </div>
+
+  <div class="lab-wrap">
+    <div class="lab-inner">
+      <div class="lab-tabs">
+        <button class="lab-tab active" data-part="p1" onclick="openPart('p1')">
+          <span class="badge-num">1</span> Part 1 · Interview
+        </button>
+        <button class="lab-tab" data-part="p2" onclick="openPart('p2')">
+          <span class="badge-num">2</span> Part 2 · Cue Card
+        </button>
+        <button class="lab-tab" data-part="p3" onclick="openPart('p3')">
+          <span class="badge-num">3</span> Part 3 · Discussion
+        </button>
+      </div>
+
+      <div class="lab-body">
+
+        <!-- ===== PART 1 ===== -->
+        <div class="panel active" id="panel-p1">
+          <div class="panel-head">
+            <div>
+              <h3>Part 1 — Introduction &amp; Interview</h3>
+              <p>4–5 phút · Trả lời 2–4 câu cho mỗi câu hỏi · Mục tiêu: 30–40 giây/câu</p>
+            </div>
+            <div class="timer-box">
+              <div class="timer-top"><span>⏱ Thời gian trả lời</span></div>
+              <div class="timer-time" id="p1-timer">00:40</div>
+              <div class="timer-track"><div class="timer-fill" id="p1-bar"></div></div>
+            </div>
+          </div>
+
+          <div class="q-card">
+            <div class="q-card-top">
+              <span class="q-tag" id="p1-topic">Hometown</span>
+              <div class="qnav">
+                <button class="qnav-btn" onclick="navQuestion('p1', -1)">←</button>
+                <span id="p1-qcounter">1 / 5</span>
+                <button class="qnav-btn" onclick="navQuestion('p1', 1)">→</button>
+              </div>
+            </div>
+            <h4 id="p1-question">Where are you from?</h4>
+          </div>
+
+          <div class="speak-controls">
+            <button class="btn-model" onclick="playSample('p1')">🔊 Nghe mẫu</button>
+            <button class="btn-record" id="p1-record" onclick="toggleRecord('p1')">🎤 Bắt đầu nói</button>
+            <button class="btn-reveal" onclick="toggleSample('p1')">👁 Xem câu trả lời mẫu</button>
+          </div>
+
+          <div class="rec-indicator" id="p1-indicator">
+            <span class="rec-dot"></span><span>Đang nghe... Hãy nói rõ ràng, tự nhiên</span>
+          </div>
+
+          <div class="live-transcript" id="p1-live"></div>
+          <div class="sample-box" id="p1-sample"></div>
+          <div class="ai-feedback" id="p1-feedback"></div>
+        </div>
+
+        <!-- ===== PART 2 ===== -->
+        <div class="panel" id="panel-p2">
+          <div class="panel-head">
+            <div>
+              <h3>Part 2 — Cue Card</h3>
+              <p>1 phút chuẩn bị · 2 phút trình bày · Mục tiêu: nói liên tục, đủ ý</p>
+            </div>
+            <div class="timer-box">
+              <div class="timer-top"><span>⏱ Thời gian nói</span></div>
+              <div class="timer-time" id="p2-timer">02:00</div>
+              <div class="timer-track"><div class="timer-fill" id="p2-bar"></div></div>
+            </div>
+          </div>
+
+          <div class="q-card">
+            <div class="q-card-top">
+              <span class="q-tag">Cue Card</span>
+              <div class="qnav">
+                <button class="qnav-btn" onclick="navQuestion('p2', -1)">←</button>
+                <span id="p2-qcounter">1 / 3</span>
+                <button class="qnav-btn" onclick="navQuestion('p2', 1)">→</button>
+              </div>
+            </div>
+            <h4 id="p2-cue-title">Describe a place you like to visit in your free time.</h4>
+            <ul id="p2-cue-bullets"></ul>
+          </div>
+
+          <div class="prep-bar">
+            <span class="prep-icon">📝</span>
+            <span class="prep-label">Chuẩn bị 1 phút</span>
+            <span class="prep-time" id="p2-prep-time">01:00</span>
+            <button class="btn-prep-sm" id="p2-prep-btn" onclick="togglePrep()">▶ Bắt đầu</button>
+          </div>
+
+          <div class="speak-controls">
+            <button class="btn-model" onclick="playSample('p2')">🔊 Nghe mẫu</button>
+            <button class="btn-record" id="p2-record" onclick="toggleRecord('p2')">🎤 Bắt đầu nói</button>
+            <button class="btn-reveal" onclick="toggleSample('p2')">👁 Xem câu trả lời mẫu</button>
+          </div>
+
+          <div class="rec-indicator" id="p2-indicator">
+            <span class="rec-dot"></span><span>Đang nghe... Hãy nói liên tục trong 2 phút</span>
+          </div>
+
+          <div class="live-transcript" id="p2-live"></div>
+          <div class="sample-box" id="p2-sample"></div>
+          <div class="ai-feedback" id="p2-feedback"></div>
+        </div>
+
+        <!-- ===== PART 3 ===== -->
+        <div class="panel" id="panel-p3">
+          <div class="panel-head">
+            <div>
+              <h3>Part 3 — Two-way Discussion</h3>
+              <p>4–5 phút · Trả lời các câu hỏi trừu tượng hơn · Mục tiêu: 45–60 giây/câu</p>
+            </div>
+            <div class="timer-box">
+              <div class="timer-top"><span>⏱ Thời gian trả lời</span></div>
+              <div class="timer-time" id="p3-timer">01:00</div>
+              <div class="timer-track"><div class="timer-fill" id="p3-bar"></div></div>
+            </div>
+          </div>
+
+          <div class="q-card">
+            <div class="q-card-top">
+              <span class="q-tag" id="p3-topic">Society</span>
+              <div class="qnav">
+                <button class="qnav-btn" onclick="navQuestion('p3', -1)">←</button>
+                <span id="p3-qcounter">1 / 4</span>
+                <button class="qnav-btn" onclick="navQuestion('p3', 1)">→</button>
+              </div>
+            </div>
+            <h4 id="p3-question">Why do some people prefer to spend their free time alone?</h4>
+          </div>
+
+          <div class="speak-controls">
+            <button class="btn-model" onclick="playSample('p3')">🔊 Nghe mẫu</button>
+            <button class="btn-record" id="p3-record" onclick="toggleRecord('p3')">🎤 Bắt đầu nói</button>
+            <button class="btn-reveal" onclick="toggleSample('p3')">👁 Xem câu trả lời mẫu</button>
+          </div>
+
+          <div class="rec-indicator" id="p3-indicator">
+            <span class="rec-dot"></span><span>Đang nghe... Hãy đưa ra quan điểm và lý do</span>
+          </div>
+
+          <div class="live-transcript" id="p3-live"></div>
+          <div class="sample-box" id="p3-sample"></div>
+          <div class="ai-feedback" id="p3-feedback"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SAMPLE ANSWERS ================= -->
+<section class="section" id="samples" style="padding-top:0">
+  <div class="section-head">
+    <span class="eyebrow">Học từ bài mẫu</span>
+    <h2>Bài nói mẫu có chú thích</h2>
+    <p>Đọc 3 bài nói mẫu band 6.0 – 7.0 kèm chú thích chi tiết để hiểu vì sao chúng đạt điểm cao.</p>
+  </div>
+
+  <div class="samples-list">
+
+    <!-- SAMPLE 1 -->
+    <div class="sample-item" id="sm1">
+      <div class="sample-head" onclick="toggleSampleItem('sm1')">
+        <span class="band-badge band-6">Band 6.0</span>
+        <h4>Part 1 — "Where are you from?"</h4>
+        <div class="sample-meta"><span>38 từ</span><span>~25 giây</span></div>
+        <div class="sample-toggle">▾</div>
+      </div>
+      <div class="sample-body">
+        <div class="sample-question">Where are you from?</div>
+        <div class="sample-answer">
+          <span class="mk">1</span>I'm from Da Nang. <span class="mk">2</span>It's a city in the central part of Vietnam. It's quite famous for its beaches and bridges. <span class="mk">3</span>I've lived there since I was born, so I really love it.
+        </div>
+        <div class="anno-list">
+          <div class="anno"><span class="n">1</span><div><strong>Trả lời trực tiếp:</strong> Nêu ngay tên thành phố — không lan man, không mất điểm Task Response.</div></div>
+          <div class="anno"><span class="n">2</span><div><strong>Mở rộng bằng đặc điểm:</strong> Vị trí địa lý + điểm nổi bật (beaches, bridges) — cho thấy vốn từ đủ dùng.</div></div>
+          <div class="anno"><span class="n">3</span><div><strong>Thêm cảm xúc cá nhân:</strong> "I've lived there since I was born" — cấu trúc thì hiện tại hoàn thành chính xác, câu tự nhiên.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SAMPLE 2 -->
+    <div class="sample-item" id="sm2">
+      <div class="sample-head" onclick="toggleSampleItem('sm2')">
+        <span class="band-badge band-65">Band 6.5</span>
+        <h4>Part 2 — Describe a person who has influenced you</h4>
+        <div class="sample-meta"><span>188 từ</span><span>~1 phút 40 giây</span></div>
+        <div class="sample-toggle">▾</div>
+      </div>
+      <div class="sample-body">
+        <div class="sample-question">
+          Describe a person who has influenced you.<br>
+          <em style="font-weight:600;color:var(--muted);font-size:.82rem">You should say: who the person is / how you know them / what qualities they have / and explain how they have influenced you.</em>
+        </div>
+        <div class="sample-answer">
+          <span class="mk">1</span>I'd like to talk about my grandmother, who has had a really big influence on my life. She's in her seventies now and she lives in a small town in the north of Vietnam.
+          <br><br>
+          <span class="mk">2</span>I've known her all my life, of course, but I think she started to influence me a lot when I was in secondary school. At that time, I was quite shy and I didn't have much confidence. My grandmother used to tell me stories about her own life — how she raised five children on her own after my grandfather passed away, and how she never gave up even when things were really difficult.
+          <br><br>
+          <span class="mk">3</span>What I admire most about her is her resilience and her positive attitude. She always says that problems are just challenges that make you stronger. Whenever I feel stressed about exams or about life in general, I think about her and I feel more motivated.
+          <br><br>
+          <span class="mk">4</span>So yeah, she's definitely the person who has influenced me the most. I think I've inherited some of her determination, and I hope I can be as strong as she is one day.
+        </div>
+        <div class="anno-list">
+          <div class="anno"><span class="n">1</span><div><strong>Mở bài rõ ràng:</strong> Giới thiệu người + mối quan hệ ngay từ câu đầu. Mệnh đề quan hệ "who has had..." tự nhiên.</div></div>
+          <div class="anno"><span class="n">2</span><div><strong>Bối cảnh + ví dụ cụ thể:</strong> Đưa mốc thời gian (secondary school) và câu chuyện thật của bà → trả lời đầy đủ cue card.</div></div>
+          <div class="anno"><span class="n">3</span><div><strong>Từ vựng tốt:</strong> resilience, positive attitude, motivated — đây là những từ đẩy band Lexical Resource lên 6.5.</div></div>
+          <div class="anno"><span class="n">4</span><div><strong>Kết bài tự nhiên:</strong> Quay lại câu hỏi + câu ước muốn cá nhân ("I hope I can be as strong as she is"). Tránh lặp lại nguyên văn mở bài.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SAMPLE 3 -->
+    <div class="sample-item" id="sm3">
+      <div class="sample-head" onclick="toggleSampleItem('sm3')">
+        <span class="band-badge band-7">Band 7.0</span>
+        <h4>Part 3 — "Has technology made communication better or worse?"</h4>
+        <div class="sample-meta"><span>152 từ</span><span>~55 giây</span></div>
+        <div class="sample-toggle">▾</div>
+      </div>
+      <div class="sample-body">
+        <div class="sample-question">Do you think technology has made communication better or worse?</div>
+        <div class="sample-answer">
+          <span class="mk">1</span>That's an interesting question. I think technology has made communication better in some ways, but it also has some drawbacks.
+          <br><br>
+          <span class="mk">2</span>On the positive side, technology allows us to stay in touch with people who live far away. For example, I can video-call my cousin in Australia whenever I want, which was impossible twenty years ago. It also makes communication faster and more convenient — you can send a message in seconds.
+          <br><br>
+          <span class="mk">3</span>However, I think there's a downside. People sometimes spend too much time on their phones and they forget how to communicate face-to-face. In addition, written messages can be misunderstood because you can't see the other person's expression or tone of voice.
+          <br><br>
+          <span class="mk">4</span>So overall, I'd say technology has improved communication, but we need to use it wisely and not let it replace real human interaction.
+        </div>
+        <div class="anno-list">
+          <div class="anno"><span class="n">1</span><div><strong>Buying time tự nhiên:</strong> "That's an interesting question" — cho bạn 1–2 giây suy nghĩ mà không bị đánh giá là ậm ừ.</div></div>
+          <div class="anno"><span class="n">2</span><div><strong>Cấu trúc hai chiều:</strong> "On the positive side..." → thừa nhận mặt tích cực trước, sau đó mới phản biện.</div></div>
+          <div class="anno"><span class="n">3</span><div><strong>Linking words đa dạng:</strong> However, In addition, For example, So overall — đây là dấu hiệu rõ ràng của Coherence band 7.</div></div>
+          <div class="anno"><span class="n">4</span><div><strong>Kết luận cân bằng:</strong> Đưa ra quan điểm rõ ràng nhưng vẫn thừa nhận mặt trái → thể hiện tư duy phản biện.</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= PHRASE BANK ================= -->
+<section class="section" id="phrases" style="padding-top:0">
+  <div class="section-head">
+    <span class="eyebrow">Mẫu câu hữu ích</span>
+    <h2>Useful Language for Speaking</h2>
+    <p>Nhấn vào thẻ bất kỳ để sao chép và dùng ngay trong bài nói của bạn.</p>
+  </div>
+
+  <div class="phrase-tabs">
+    <button class="ptab active" data-cat="opinion" onclick="switchPhrase('opinion')">Nêu quan điểm</button>
+    <button class="ptab" data-cat="reason" onclick="switchPhrase('reason')">Đưa lý do</button>
+    <button class="ptab" data-cat="compare" onclick="switchPhrase('compare')">So sánh</button>
+    <button class="ptab" data-cat="describe" onclick="switchPhrase('describe')">Mô tả</button>
+    <button class="ptab" data-cat="buy" onclick="switchPhrase('buy')">Mua thời gian</button>
+    <button class="ptab" data-cat="conclude" onclick="switchPhrase('conclude')">Kết luận</button>
+  </div>
+
+  <div class="phrase-grid" id="phraseGrid"></div>
+</section>
+
+<!-- ================= COMMON MISTAKES ================= -->
+<section class="section" style="padding-top:0">
+  <div class="section-head">
+    <span class="eyebrow">Tránh mất điểm</span>
+    <h2>6 lỗi Speaking thường gặp ở band 5.5</h2>
+    <p>Sửa những lỗi này có thể giúp bạn tăng 0.5–1.0 band Speaking ngay lập tức.</p>
+  </div>
+
+  <div class="mistakes-grid">
+    <div class="mistake">
+      <div class="wrong">✗ I am agree with this idea</div>
+      <div class="right">✓ I agree with this idea</div>
+      <p>"Agree" là động từ — không dùng "am" phía trước.</p>
+    </div>
+    <div class="mistake">
+      <div class="wrong">✗ I very like playing football</div>
+      <div class="right">✓ I really like playing football</div>
+      <p>"Very" không đứng trước động từ — dùng "really", "quite", "absolutely".</p>
+    </div>
+    <div class="mistake">
+      <div class="wrong">✗ In nowadays, technology is important</div>
+      <div class="right">✓ Nowadays, technology is important</div>
+      <p>"Nowadays" đã là trạng từ — không cần giới từ "in".</p>
+    </div>
+    <div class="mistake">
+      <div class="wrong">✗ He don't like reading books</div>
+      <div class="right">✓ He doesn't like reading books</div>
+      <p>Ngôi thứ 3 số ít dùng "doesn't", không phải "don't".</p>
+    </div>
+    <div class="mistake">
+      <div class="wrong">✗ I have went to many countries</div>
+      <div class="right">✓ I have gone to many countries</div>
+      <p>Quá khứ phân từ của "go" là "gone", không phải "went".</p>
+    </div>
+    <div class="mistake">
+      <div class="wrong">✗ There are many peoples in the city</div>
+      <div class="right">✓ There are many people in the city</div>
+      <p>"People" đã là danh từ số nhiều — không thêm "s".</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRESS ================= -->
+<section class="section" id="progress" style="padding-top:0">
+  <div class="section-head">
+    <span class="eyebrow">Theo dõi tiến độ</span>
+    <h2>Hành trình luyện nói của bạn</h2>
+    <p>Kết quả các bài luyện được lưu tự động trên trình duyệt để bạn theo dõi sự tiến bộ.</p>
+  </div>
+
+  <div class="progress-card">
+    <div class="band-visual">
+      <div class="big" id="bandDisplay">5.5</div>
+      <div class="cap">Band Speaking ước tính</div>
+      <div class="pill" id="bandPill">Mục tiêu: 6.5</div>
+    </div>
+    <div class="p-list">
+      <div class="p-item">
+        <div class="top"><span>🗣️ Part 1 · Interview</span><em id="pct-p1">0% hoàn thành</em></div>
+        <div class="p-track"><div class="p-fill" id="bar-p1" style="background:linear-gradient(90deg,#6D28D9,#A855F7)"></div></div>
+      </div>
+      <div class="p-item">
+        <div class="top"><span>🎴 Part 2 · Cue Card</span><em id="pct-p2">0% hoàn thành</em></div>
+        <div class="p-track"><div class="p-fill" id="bar-p2" style="background:linear-gradient(90deg,#7C3AED,#A78BFA)"></div></div>
+      </div>
+      <div class="p-item">
+        <div class="top"><span>💬 Part 3 · Discussion</span><em id="pct-p3">0% hoàn thành</em></div>
+        <div class="p-track"><div class="p-fill" id="bar-p3" style="background:linear-gradient(90deg,#8B5CF6,#C4B5FD)"></div></div>
+      </div>
+      <div class="p-item">
+        <div class="top"><span>🎤 Pronunciation</span><em id="pct-pron">0% hoàn thành</em></div>
+        <div class="p-track"><div class="p-fill" id="bar-pron" style="background:linear-gradient(90deg,#F43F5E,#FB7185)"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<div class="cta">
+  <div class="cta-box">
+    <h2>Nói mỗi ngày — tiến bộ mỗi tuần</h2>
+    <p>Luyện 1 câu Part 1 hoặc 1 cue card Part 2 mỗi ngày. AI Coach sẽ giúp bạn nhận ra lỗi sai và cải thiện band điểm nhanh chóng.</p>
+    <a href="#lab" class="btn btn-primary">🎤 Bắt đầu luyện nói ngay</a>
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <div class="logo">
+        <div class="logo-mark">S</div>
+        <span style="color:#fff">Speaking Studio<small style="color:#8FA2BD">IELTS 5.5 → 6.5+</small></span>
+      </div>
+      <p>Nền tảng luyện Speaking với AI nhận diện giọng nói, đề mẫu chuẩn IELTS và lộ trình 8 tuần dành riêng cho học viên 5.5.</p>
+    </div>
+    <div class="foot-col">
+      <h5>Luyện tập</h5>
+      <ul>
+        <li><a href="#lab" onclick="openPart('p1')">Part 1 · Interview</a></li>
+        <li><a href="#lab" onclick="openPart('p2')">Part 2 · Cue Card</a></li>
+        <li><a href="#lab" onclick="openPart('p3')">Part 3 · Discussion</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h5>Tài nguyên</h5>
+      <ul>
+        <li><a href="#samples">Bài mẫu có chú thích</a></li>
+        <li><a href="#phrases">Mẫu câu hữu ích</a></li>
+        <li><a href="#progress">Tiến độ</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h5>Hỗ trợ</h5>
+      <ul>
+        <li><a href="#">Hướng dẫn sử dụng</a></li>
+        <li><a href="#">Liên hệ</a></li>
+        <li><a href="#">Câu hỏi thường gặp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">© 2024 IELTS Speaking Studio. Thiết kế chuẩn format IELTS quốc tế.</div>
+</footer>
+
+<div class="toast" id="toast">✓ Đã sao chép</div>
+
+<script>
+/* =====================================================
+   DATA — SPEAKING QUESTIONS
+===================================================== */
+const SPEAKING = {
+  p1: {
+    target: 40,
+    questions: [
+      {
+        topic: 'Hometown',
+        q: 'Where are you from?',
+        sample: `I'm from Hanoi, which is the capital of Vietnam. It's a big and busy city, famous for its old quarter and street food. I've lived there all my life, so I know it quite well.`,
+        band: '6.0'
+      },
+      {
+        topic: 'Work / Study',
+        q: 'Do you work or are you a student?',
+        sample: `I'm a student at the moment. I'm studying business administration at a university in Hanoi. It's quite challenging, but I really enjoy it because I'm learning a lot about how companies work.`,
+        band: '6.0'
+      },
+      {
+        topic: 'Free time',
+        q: 'What do you like to do in your free time?',
+        sample: `In my free time, I usually listen to music or watch films. I find it really relaxing after a long day of studying. Sometimes I also go for a walk in the park near my house, especially in the evening when the weather is cooler.`,
+        band: '6.5'
+      },
+      {
+        topic: 'Preferences',
+        q: 'Do you prefer reading books or watching films?',
+        sample: `I think I prefer watching films, because it's more relaxing for me. I don't have to concentrate too much, and I can just enjoy the story. But I do read books sometimes, especially when I want to learn something new.`,
+        band: '6.0'
+      },
+      {
+        topic: 'Daily life',
+        q: 'How often do you use public transport?',
+        sample: `I use public transport quite often — maybe four or five times a week. I usually take the bus to university because it's cheaper than driving, and I can read or listen to music on the way. The only problem is that it can be quite crowded during rush hour.`,
+        band: '6.5'
+      }
+    ]
+  },
+
+  p2: {
+    target: 120,
+    questions: [
+      {
+        topic: 'Cue Card',
+        q: 'Describe a place you like to visit in your free time.',
+        bullets: [
+          'Where the place is',
+          'How you get there',
+          'What you usually do there',
+          'And explain why you like visiting this place'
+        ],
+        sample: `I'd like to talk about a small café near my house that I go to quite often. It's called The Reading Corner, and it's located about ten minutes' walk from where I live. It's quite a cosy place with lots of bookshelves and comfortable armchairs.
+        
+I usually go there at weekends, either alone or with a couple of friends. I normally order a coffee and spend an hour or two reading or working on my laptop. The atmosphere is really relaxing — there's soft music playing in the background and the staff are very friendly.
+
+The main reason I like this place is that it gives me a break from my busy daily routine. My home is quite noisy because I live with my family, so having a quiet spot like this is really valuable. It also helps me focus on my studies. So yeah, that's probably why I keep going back there.`,
+        band: '6.5'
+      },
+      {
+        topic: 'Cue Card',
+        q: 'Describe a person who has influenced you.',
+        bullets: [
+          'Who the person is',
+          'How you know them',
+          'What qualities they have',
+          'And explain how they have influenced you'
+        ],
+        sample: `I'd like to talk about my grandmother, who has had a really big influence on my life. She's in her seventies now and she lives in a small town in the north of Vietnam.
+
+I've known her all my life, of course, but I think she started to influence me a lot when I was in secondary school. At that time, I was quite shy and I didn't have much confidence. My grandmother used to tell me stories about her own life — how she raised five children on her own after my grandfather passed away, and how she never gave up even when things were really difficult.
+
+What I admire most about her is her resilience and her positive attitude. She always says that problems are just challenges that make you stronger. Whenever I feel stressed about exams or about life in general, I think about her and I feel more motivated.
+
+So yeah, she's definitely the person who has influenced me the most. I think I've inherited some of her determination, and I hope I can be as strong as she is one day.`,
+        band: '6.5'
+      },
+      {
+        topic: 'Cue Card',
+        q: 'Describe a memorable journey you have taken.',
+        bullets: [
+          'Where you went',
+          'Who you went with',
+          'What you did there',
+          'And explain why it was memorable'
+        ],
+        sample: `I'd like to talk about a trip I took to Da Lat last summer. Da Lat is a small city in the central highlands of Vietnam, and it's famous for its cool weather and beautiful flowers.
+
+I went there with two of my closest friends from university. We travelled by bus, and the journey took about six hours. The road was quite winding, but the views were incredible — we could see mountains and pine forests along the way.
+
+When we arrived, we spent three days there. We visited a few waterfalls, tried some local food, and rented motorbikes to explore the surrounding countryside. On the last night, we went to a night market and bought some souvenirs.
+
+The reason this trip was so memorable is that it was the first time I'd travelled without my family. I felt really independent, and I learned a lot about planning and looking after myself. Plus, spending time with my friends in such a beautiful place was just unforgettable.`,
+        band: '6.5'
+      }
+    ]
+  },
+
+  p3: {
+    target: 60,
+    questions: [
+      {
+        topic: 'Society',
+        q: 'Why do some people prefer to spend their free time alone?',
+        sample: `I think there are a few reasons. Firstly, some people are naturally introverted, so they recharge by spending time alone rather than in a crowd. Secondly, modern life is quite stressful, so having some quiet time can be a way to reduce stress. In addition, some people just enjoy their own company — they might read, listen to music, or do creative work. I don't think it's necessarily a bad thing; in fact, I think everyone needs some time alone to think clearly.`,
+        band: '6.5'
+      },
+      {
+        topic: 'Technology',
+        q: 'Do you think technology has made communication better or worse?',
+        sample: `That's an interesting question. I think technology has made communication better in some ways, but it also has some drawbacks.
+
+On the positive side, technology allows us to stay in touch with people who live far away. For example, I can video-call my cousin in Australia whenever I want, which was impossible twenty years ago. It also makes communication faster and more convenient — you can send a message in seconds.
+
+However, I think there's a downside. People sometimes spend too much time on their phones and they forget how to communicate face-to-face. In addition, written messages can be misunderstood because you can't see the other person's expression or tone of voice.
+
+So overall, I'd say technology has improved communication, but we need to use it wisely and not let it replace real human interaction.`,
+        band: '7.0'
+      },
+      {
+        topic: 'Travel',
+        q: 'Do you think it is important for young people to travel?',
+        sample: `Yes, I think it's very important. Travelling gives young people the chance to experience different cultures and ways of life, which can broaden their perspective. It also helps them become more independent — they have to deal with problems like booking tickets or finding their way in a new place. Of course, it can be expensive, but I think the benefits are worth it.`,
+        band: '6.5'
+      },
+      {
+        topic: 'Public policy',
+        q: 'Should governments spend more money on public transport?',
+        sample: `In my opinion, yes. Public transport is essential for people who don't have a car, especially in big cities. If governments invest more in buses and trains, it would reduce traffic congestion and pollution. It would also make transport more affordable for everyone. However, I don't think they should ignore roads completely — rural areas still need good road connections.`,
+        band: '7.0'
+      }
+    ]
+  }
+};
+
+/* =====================================================
+   PHRASE BANK DATA
+===================================================== */
+const PHRASES = {
+  opinion: [
+    { en: 'In my opinion, ...', vi: 'Theo tôi, ...' },
+    { en: 'From my perspective, ...', vi: 'Từ góc nhìn của tôi, ...' },
+    { en: 'I strongly believe that ...', vi: 'Tôi tin chắc rằng ...' },
+    { en: 'Personally, I think ...', vi: 'Cá nhân tôi nghĩ ...' },
+    { en: 'I would say that ...', vi: 'Tôi cho rằng ...' }
+  ],
+  reason: [
+    { en: 'The main reason is that ...', vi: 'Lý do chính là ...' },
+    { en: 'This is because ...', vi: 'Đó là bởi vì ...' },
+    { en: 'One reason for this is ...', vi: 'Một lý do cho điều này là ...' },
+    { en: 'Another factor is ...', vi: 'Một yếu tố khác là ...' },
+    { en: 'This is mainly due to ...', vi: 'Điều này chủ yếu là do ...' }
+  ],
+  compare: [
+    { en: 'Compared to ...', vi: 'So với ...' },
+    { en: 'On the other hand, ...', vi: 'Mặt khác, ...' },
+    { en: 'In contrast, ...', vi: 'Ngược lại, ...' },
+    { en: 'Whereas ...', vi: 'Trong khi ...' },
+    { en: 'Both A and B have their own advantages.', vi: 'Cả A và B đều có ưu điểm riêng.' }
+  ],
+  describe: [
+    { en: 'It is located in ...', vi: 'Nó nằm ở ...' },
+    { en: 'What I like most about it is ...', vi: 'Điều tôi thích nhất ở đó là ...' },
+    { en: 'It is famous for ...', vi: 'Nó nổi tiếng với ...' },
+    { en: 'The atmosphere is really ...', vi: 'Không khí thực sự ...' },
+    { en: 'It gives me a chance to ...', vi: 'Nó cho tôi cơ hội ...' }
+  ],
+  buy: [
+    { en: "That's an interesting question.", vi: 'Đó là một câu hỏi thú vị.' },
+    { en: 'Let me think for a moment.', vi: 'Để tôi suy nghĩ một chút.' },
+    { en: 'Well, that\'s a good point.', vi: 'À, đó là một ý hay.' },
+    { en: 'How should I put this...', vi: 'Tôi nên diễn đạt thế nào nhỉ...' },
+    { en: "I've never really thought about it, but ...", vi: 'Tôi chưa từng nghĩ về điều đó, nhưng ...' }
+  ],
+  conclude: [
+    { en: 'So overall, ...', vi: 'Vậy tổng thể, ...' },
+    { en: 'To sum up, ...', vi: 'Tóm lại, ...' },
+    { en: 'In conclusion, ...', vi: 'Kết luận, ...' },
+    { en: 'So that's why ...', vi: 'Vậy đó là lý do tại sao ...' },
+    { en: 'All in all, ...', vi: 'Nhìn chung, ...' }
+  ]
+};
+
+/* =====================================================
+   GRAMMAR / ANALYSIS DATA
+===================================================== */
+const STOPWORDS = new Set(['the','a','an','and','or','but','if','then','than','that','this','these','those','is','are','was','were','be','been','being','to','of','in','on','at','for','with','by','from','as','it','its','they','them','their','there','here','we','our','you','your','i','my','me','he','she','his','her','not','no','do','does','did','have','has','had','will','would','can','could','should','may','might','must','so','such','very','more','most','much','many','some','any','all','each','every','both','few','other','another','also','just','only','about','into','over','under','between','through','during','before','after','up','down','out','off','again','further','once','when','where','why','how','what','which','who','whom','whose','because','while','although','however','therefore','thus','hence','moreover','furthermore','additionally','really','quite','actually','kind','sort','like','well','yeah','okay','ok']);
+
+const FILLERS = ['um','uh','er','ah','erm','hmm','like','you know','i mean','actually','basically','literally','kind of','sort of','well'];
+
+const LINKERS = ['because','since','as','so','however','although','though','even though','moreover','furthermore','in addition','besides','for example','for instance','on the other hand','in contrast','as a result','therefore','firstly','secondly','finally','in my opinion','i think','i believe','in fact','actually','overall','to sum up','on the positive side','on the negative side'];
+
+const GRAMMAR_CHECKS = [
+  { re: /\bi am agree\b/gi, fix: 'I agree', msg: 'Không dùng "am" trước "agree" — "agree" là động từ.' },
+  { re: /\bvery like\b/gi, fix: 'really like', msg: '"Very" không đứng trước động từ — dùng "really".' },
+  { re: /\bpeoples\b/gi, fix: 'people', msg: '"People" đã là số nhiều, không thêm "s".' },
+  { re: /\binformations\b/gi, fix: 'information', msg: '"Information" không đếm được.' },
+  { re: /\badvices\b/gi, fix: 'advice', msg: '"Advice" không đếm được.' },
+  { re: /\bknowledges\b/gi, fix: 'knowledge', msg: '"Knowledge" không đếm được.' },
+  { re: /\bhe don'?t\b/gi, fix: "he doesn't", msg: 'Ngôi thứ 3 số ít dùng "doesn\'t".' },
+  { re: /\bshe don'?t\b/gi, fix: "she doesn't", msg: 'Ngôi thứ 3 số ít dùng "doesn\'t".' },
+  { re: /\bin nowadays\b/gi, fix: 'nowadays', msg: 'Không dùng "in" trước "nowadays".' },
+  { re: /\bmore better\b/gi, fix: 'better', msg: 'Không dùng "more" trước so sánh hơn.' },
+  { re: /\bthe most biggest\b/gi, fix: 'the biggest', msg: 'Không dùng "most" trước so sánh nhất.' },
+  { re: /\bdiscuss about\b/gi, fix: 'discuss', msg: '"Discuss" không cần giới từ "about".' },
+  { re: /\bexplain me\b/gi, fix: 'explain to me', msg: 'Dùng "explain to somebody".' },
+  { re: /\bdifferent than\b/gi, fix: 'different from', msg: 'Chuẩn là "different from".' },
+  { re: /\bi'?m boring\b/gi, fix: "I'm bored", msg: '"Boring" (chán) khác "bored" (buồn chán).' },
+  { re: /\baccording to me\b/gi, fix: 'in my opinion', msg: 'Dùng "in my opinion" thay vì "according to me".' },
+  { re: /\bi have went\b/gi, fix: 'I have gone', msg: 'Quá khứ phân từ của "go" là "gone".' },
+  { re: /\bi have saw\b/gi, fix: 'I have seen', msg: 'Quá khứ phân từ của "see" là "seen".' },
+  { re: /\bi didn'?t went\b/gi, fix: "I didn't go", msg: 'Sau "didn\'t" dùng động từ nguyên mẫu.' },
+  { re: /\bcan able to\b/gi, fix: 'can / am able to', msg: 'Không dùng "can able to".' },
+  { re: /\bthe reason is because\b/gi, fix: 'the reason is that', msg: 'Dùng "the reason is that".' },
+  { re: /\bthere is many\b/gi, fix: 'there are many', msg: 'Dùng "there are" với danh từ số nhiều.' }
+];
+
+/* =====================================================
+   STATE
+===================================================== */
+const currentIndex = { p1: 0, p2: 0, p3: 0 };
+let recorderState = {
+  active: false, part: null, index: 0,
+  recognition: null, finalTranscript: '', interimTranscript: '',
+  confidenceSum: 0, confidenceCount: 0,
+  startTime: 0, elapsed: 0, remaining: 0, target: 0,
+  timerInterval: null, finalizing: false
+};
+let prepState = { running: false, remaining: 60, interval: null };
+let currentVoices = [];
+let currentPhraseCat = 'opinion';
+
+/* =====================================================
+   SPEECH SYNTHESIS
+===================================================== */
+function loadVoices() {
+  currentVoices = window.speechSynthesis ? window.speechSynthesis.getVoices() : [];
+}
+if (window.speechSynthesis) {
+  loadVoices();
+  if (typeof speechSynthesis.onvoiceschanged !== 'undefined') {
+    speechSynthesis.onvoiceschanged = loadVoices;
+  }
+}
+
+function pickEnglishVoice() {
+  if (!currentVoices.length && window.speechSynthesis) currentVoices = speechSynthesis.getVoices();
+  if (!currentVoices.length) return null;
+  const en = currentVoices.filter(v => v.lang && v.lang.toLowerCase().startsWith('en'));
+  if (!en.length) return null;
+  return en.find(v => v.lang.toLowerCase() === 'en-gb')
+      || en.find(v => v.lang.toLowerCase() === 'en-us')
+      || en[0];
+}
+
+function speakText(text, rate = 0.9) {
+  if (!window.speechSynthesis) { showToast('⚠️ Trình duyệt không hỗ trợ audio.'); return; }
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'en-GB';
+  u.rate = rate;
+  const voice = pickEnglishVoice();
+  if (voice) u.voice = voice;
+  speechSynthesis.speak(u);
+}
+
+/* =====================================================
+   TAB SWITCHING
+===================================================== */
+function openPart(part) {
+  if (recorderState.active) stopRecording();
+  document.querySelectorAll('.lab-tab').forEach(t => t.classList.toggle('active', t.dataset.part === part));
+  document.querySelectorAll('.panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + part));
+  setTimeout(() => {
+    document.getElementById('lab').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 60);
+}
+
+/* =====================================================
+   RENDER QUESTION
+===================================================== */
+function renderQuestion(part) {
+  const data = SPEAKING[part];
+  const idx = currentIndex[part];
+  const item = data.questions[idx];
+
+  if (part === 'p2') {
+    document.getElementById('p2-cue-title').textContent = item.q;
+    document.getElementById('p2-cue-bullets').innerHTML = item.bullets.map(b => `<li>${escapeHtml(b)}</li>`).join('');
+    document.getElementById('p2-qcounter').textContent = (idx + 1) + ' / ' + data.questions.length;
+  } else {
+    document.getElementById(part + '-question').textContent = item.q;
+    document.getElementById(part + '-topic').textContent = item.topic;
+    document.getElementById(part + '-qcounter').textContent = (idx + 1) + ' / ' + data.questions.length;
+  }
+
+  // Sample box content
+  const sampleBox = document.getElementById(part + '-sample');
+  const bandClass = item.band === '7.0' ? 'band-7' : item.band === '6.5' ? 'band-65' : 'band-6';
+  sampleBox.innerHTML = `
+    <div class="sb-head">
+      <h5>💡 Câu trả lời mẫu</h5>
+      <span class="band-badge ${bandClass}">Band ${escapeHtml(item.band)}</span>
+    </div>
+    <div class="sb-text">${escapeHtml(item.sample).replace(/\n\n/g, '</p><p style="margin-top:10px">').replace(/\n/g, ' ')}</div>
+  `;
+  sampleBox.classList.remove('show');
+
+  // Feedback reset
+  document.getElementById(part + '-feedback').classList.remove('show');
+  document.getElementById(part + '-feedback').innerHTML = '';
+
+  // Live transcript reset
+  const live = document.getElementById(part + '-live');
+  live.classList.remove('show');
+  live.innerHTML = '';
+
+  // Timer reset
+  resetPartTimer(part);
+
+  // Prep reset for p2
+  if (part === 'p2') resetPrep();
+}
+
+function navQuestion(part, dir) {
+  if (recorderState.active && recorderState.part === part) stopRecording();
+  const data = SPEAKING[part];
+  const len = data.questions.length;
+  currentIndex[part] = (currentIndex[part] + dir + len) % len;
+  renderQuestion(part);
+}
+
+/* =====================================================
+   TIMER (per part)
+===================================================== */
+function resetPartTimer(part) {
+  const target = SPEAKING[part].target;
+  const timerEl = document.getElementById(part + '-timer');
+  const barEl = document.getElementById(part + '-bar');
+  if (!timerEl) return;
+  const m = Math.floor(target / 60);
+  const s = target % 60;
+  timerEl.textContent = String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+  timerEl.classList.remove('warn');
+  if (barEl) { barEl.style.width = '100%'; barEl.classList.remove('warn'); }
+}
+
+function updatePartTimer(part) {
+  if (recorderState.part !== part) return;
+  const timerEl = document.getElementById(part + '-timer');
+  const barEl = document.getElementById(part + '-bar');
+  if (!timerEl) return;
+  const rem = Math.max(0, recorderState.remaining);
+  const m = Math.floor(rem / 60);
+  const s = rem % 60;
+  timerEl.textContent = String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+  const pct = recorderState.target > 0 ? (rem / recorderState.target) * 100 : 0;
+  if (barEl) barEl.style.width = pct + '%';
+  const warn = rem <= 10;
+  timerEl.classList.toggle('warn', warn);
+  if (barEl) barEl.classList.toggle('warn', warn);
+}
+
+/* =====================================================
+   PREP TIMER (Part 2)
+===================================================== */
+function resetPrep() {
+  clearInterval(prepState.interval);
+  prepState = { running: false, remaining: 60, interval: null };
+  const el = document.getElementById('p2-prep-time');
+  if (el) { el.textContent = '01:00'; el.classList.remove('warn'); }
+  const btn = document.getElementById('p2-prep-btn');
+  if (btn) { btn.textContent = '▶ Bắt đầu'; btn.classList.remove('running'); }
+}
+
+function togglePrep() {
+  const btn = document.getElementById('p2-prep-btn');
+  const el = document.getElementById('p2-prep-time');
+
+  if (prepState.running) {
+    clearInterval(prepState.interval);
+    prepState.running = false;
+    btn.textContent = '▶ Tiếp tục';
+    btn.classList.remove('running');
+    return;
+  }
+
+  prepState.running = true;
+  btn.textContent = '⏸ Tạm dừng';
+  btn.classList.add('running');
+
+  prepState.interval = setInterval(() => {
+    prepState.remaining--;
+    if (prepState.remaining <= 0) {
+      prepState.remaining = 0;
+      clearInterval(prepState.interval);
+      prepState.running = false;
+      btn.textContent = '▶ Bắt đầu';
+      btn.classList.remove('running');
+      showToast('⏰ Hết thời gian chuẩn bị! Bắt đầu nói thôi.');
+    }
+    const m = Math.floor(prepState.remaining / 60);
+    const s = prepState.remaining % 60;
+    el.textContent = String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+    el.classList.toggle('warn', prepState.remaining <= 10);
+  }, 1000);
+}
+
+/* =====================================================
+   RECORDING
+===================================================== */
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+function toggleRecord(part) {
+  if (recorderState.active) {
+    if (recorderState.part === part) {
+      stopRecording();
+    } else {
+      stopRecording();
+      setTimeout(() => startRecording(part), 500);
+    }
+  } else {
+    startRecording(part);
+  }
+}
+
+function startRecording(part) {
+  if (!SpeechRecognition) {
+    showToast('⚠️ Trình duyệt không hỗ trợ nhận diện giọng nói. Hãy dùng Chrome hoặc Edge.');
+    return;
+  }
+
+  const target = SPEAKING[part].target;
+
+  recorderState = {
+    active: true, part: part, index: currentIndex[part],
+    recognition: null, finalTranscript: '', interimTranscript: '',
+    confidenceSum: 0, confidenceCount: 0,
+    startTime: Date.now(), elapsed: 0,
+    remaining: target, target: target,
+    timerInterval: null, finalizing: false
+  };
+
+  const rec = new SpeechRecognition();
+  rec.lang = 'en-US';
+  rec.continuous = true;
+  rec.interimResults = true;
+  rec.maxAlternatives = 1;
+
+  rec.onresult = (e) => {
+    let interim = '';
+    for (let i = e.resultIndex; i < e.results.length; i++) {
+      const t = e.results[i][0].transcript;
+      if (e.results[i].isFinal) {
+        recorderState.finalTranscript += t + ' ';
+        const conf = e.results[i][0].confidence;
+        if (typeof conf === 'number' && conf > 0) {
+          recorderState.confidenceSum += conf;
+          recorderState.confidenceCount++;
+        }
+      } else {
+        interim += t;
+      }
+    }
+    recorderState.interimTranscript = interim;
+    updateLiveTranscript(part);
+  };
+
+  rec.onerror = (e) => {
+    if (e.error === 'no-speech') return;
+    if (e.error === 'not-allowed') {
+      showToast('⚠️ Bạn cần cho phép micro để luyện nói.');
+      stopRecording();
+    } else if (e.error === 'audio-capture') {
+      showToast('⚠️ Không tìm thấy micro. Kiểm tra thiết bị.');
+      stopRecording();
+    }
+  };
+
+  rec.onend = () => {
+    if (recorderState.active) {
+      try { rec.start(); } catch (e) { /* ignore */ }
+    }
+  };
+
+  try {
+    rec.start();
+  } catch (e) {
+    showToast('⚠️ Không thể khởi động micro. Thử lại sau.');
+    recorderState.active = false;
+    return;
+  }
+
+  recorderState.recognition = rec;
+
+  // UI
+  const btn = document.getElementById(part + '-record');
+  btn.textContent = '⏹ Dừng & Phân tích';
+  btn.classList.add('recording');
+  document.getElementById(part + '-indicator').classList.add('show');
+  const live = document.getElementById(part + '-live');
+  live.classList.add('show');
+  live.innerHTML = '<span class="lt-label">AI đang nghe</span><span class="lt-text"></span>';
+
+  // Hide old feedback/sample
+  document.getElementById(part + '-feedback').classList.remove('show');
+  document.getElementById(part + '-sample').classList.remove('show');
+
+  // Countdown
+  recorderState.timerInterval = setInterval(() => {
+    recorderState.elapsed++;
+    recorderState.remaining--;
+    updatePartTimer(part);
+    if (recorderState.remaining <= 0) {
+      stopRecording();
+    }
+  }, 1000);
+
+  updatePartTimer(part);
+}
+
+function updateLiveTranscript(part) {
+  const live = document.getElementById(part + '-live');
+  if (!live) return;
+  const finalText = recorderState.finalTranscript.trim();
+  const interim = recorderState.interimTranscript;
+  live.innerHTML = `<span class="lt-label">AI đang nghe</span>
+    <span class="lt-text">${escapeHtml(finalText)}</span>
+    ${interim ? `<span class="lt-interim">${escapeHtml(interim)}</span>` : ''}`;
+}
+
+function stopRecording() {
+  if (!recorderState.active) return;
+  const part = recorderState.part;
+
+  recorderState.active = false;
+  clearInterval(recorderState.timerInterval);
+
+  if (recorderState.recognition) {
+    try { recorderState.recognition.stop(); } catch (e) {}
+  }
+
+  const btn = document.getElementById(part + '-record');
+  if (btn) {
+    btn.textContent = '🎤 Bắt đầu nói';
+    btn.classList.remove('recording');
+  }
+  const ind = document.getElementById(part + '-indicator');
+  if (ind) ind.classList.remove('show');
+
+  // Finalize after delay to collect final results
+  const finalPart = part;
+  const finalIndex = recorderState.index;
+  const finalElapsed = recorderState.elapsed;
+  const finalTranscript = (recorderState.finalTranscript + ' ' + recorderState.interimTranscript).trim();
+  const finalConf = recorderState.confidenceCount > 0
+    ? recorderState.confidenceSum / recorderState.confidenceCount
+    : 0.75;
+
+  recorderState.finalizing = true;
+
+  setTimeout(() => {
+    finalizeRecording(finalPart, finalIndex, finalTranscript, finalElapsed, finalConf);
+  }, 600);
+}
+
+/* =====================================================
+   FINALIZE + ANALYZE
+===================================================== */
+function finalizeRecording(part, index, transcript, elapsedSec, confidence) {
+  const live = document.getElementById(part + '-live');
+  if (live) live.classList.remove('show');
+
+  const feedbackEl = document.getElementById(part + '-feedback');
+  if (!feedbackEl) return;
+
+  if (!transcript || transcript.trim().length < 3) {
+    feedbackEl.innerHTML = `<div class="result-box show bad" style="margin-top:0">
+      <h4>⚠️ Không nhận diện được giọng nói</h4>
+      <p>Hãy kiểm tra micro, nói to và rõ hơn, và thử lại. Bạn cũng có thể dùng nút "🔊 Nghe mẫu" để nghe phát âm chuẩn.</p>
+    </div>`;
+    feedbackEl.classList.add('show');
+    return;
+  }
+
+  feedbackEl.innerHTML = `<div class="loading-box show"><div class="spinner"></div><p>AI đang phân tích bài nói của bạn...</p></div>`;
+  feedbackEl.classList.add('show');
+
+  setTimeout(() => {
+    const analysis = analyzeSpeech(transcript, elapsedSec, confidence);
+    feedbackEl.innerHTML = renderFeedback(analysis, part, index);
+    feedbackEl.classList.add('show');
+
+    setTimeout(() => {
+      feedbackEl.querySelectorAll('.cfill').forEach(el => {
+        el.style.width = el.dataset.w;
+      });
+      const ring = feedbackEl.querySelector('.band-ring');
+      if (ring && analysis) {
+        const pct = Math.min(100, (analysis.overall / 9) * 100);
+        ring.style.setProperty('--p', pct);
+        ring.style.setProperty('--c', bandColor(analysis.overall));
+      }
+    }, 100);
+
+    saveProgress(part, analysis.overall);
+    saveProgress('pron', analysis.scores.pron * 10);
+
+    feedbackEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, 900);
+}
+
+/* =====================================================
+   SPEECH ANALYSIS
+===================================================== */
+function analyzeSpeech(transcript, durationSec, confidence) {
+  const raw = transcript.trim();
+  const words = raw.toLowerCase().split(/\s+/).filter(w => /[a-z']/.test(w));
+  const wordCount = words.length;
+  const durationMin = Math.max(durationSec / 60, 0.1);
+  const wpm = Math.round(wordCount / durationMin);
+
+  // Fillers
+  let fillerCount = 0;
+  const fillerHits = {};
+  FILLERS.forEach(f => {
+    const re = new RegExp('\\b' + f.replace(/\s+/g, '\\s+') + '\\b', 'gi');
+    const m = raw.match(re);
+    if (m) { fillerCount += m.length; fillerHits[f] = m.length; }
+  });
+  const fillerRatio = wordCount > 0 ? fillerCount / wordCount : 0;
+
+  // Lexical diversity
+  const content = words.filter(w => !STOPWORDS.has(w) && w.length > 2);
+  const uniq = new Set(content);
+  const ttr = content.length > 0 ? uniq.size / content.length : 0;
+
+  // Sentences
+  const sentences = raw.split(/[.!?]+/).map(s => s.trim()).filter(s => s.split(/\s+/).length > 2);
+  const sCount = Math.max(1, sentences.length);
+  const avgLen = wordCount / sCount;
+
+  // Linkers
+  const linkersUsed = LINKERS.filter(l => new RegExp('\\b' + l.replace(/\s+/g, '\\s+') + '\\b', 'i').test(raw));
+
+  // Grammar errors
+  const grammarErrors = [];
+  GRAMMAR_CHECKS.forEach(g => {
+    const m = raw.match(g.re);
+    if (m) {
+      grammarErrors.push({ found: m[0], fix: g.fix, msg: g.msg });
+    }
+  });
+
+  // ---- Scoring ----
+  const clamp = (v) => Math.min(8.5, Math.max(3.5, v));
+
+  // Fluency & Coherence
+  let fluency = 4.5;
+  if (wpm >= 100 && wpm <= 170) fluency += 1.5;
+  else if (wpm >= 80) fluency += 1.0;
+  else if (wpm >= 60) fluency += 0.5;
+  else fluency -= 0.4;
+
+  if (fillerRatio < 0.02) fluency += 1.0;
+  else if (fillerRatio < 0.05) fluency += 0.7;
+  else if (fillerRatio < 0.10) fluency += 0.3;
+  else fluency -= 0.6;
+
+  if (wordCount >= 80) fluency += 0.5;
+  else if (wordCount >= 40) fluency += 0.2;
+  else fluency -= 0.6;
+
+  fluency += Math.min(0.4, linkersUsed.length * 0.06);
+  fluency = clamp(fluency);
+
+  // Lexical Resource
+  let lexical = 4.5;
+  if (ttr >= 0.65) lexical += 2.0;
+  else if (ttr >= 0.55) lexical += 1.6;
+  else if (ttr >= 0.45) lexical += 1.2;
+  else if (ttr >= 0.35) lexical += 0.8;
+  else lexical += 0.3;
+
+  lexical += Math.min(1.0, linkersUsed.length * 0.15);
+  if (content.length >= 30) lexical += 0.3;
+  lexical = clamp(lexical);
+
+  // Grammatical Range
+  let grammar = 6.2;
+  grammar -= grammarErrors.length * 0.4;
+  if (sCount >= 5) grammar += 0.3;
+  if (avgLen >= 8 && avgLen <= 20) grammar += 0.3;
+  if (avgLen > 26) grammar -= 0.3;
+  grammar = clamp(grammar);
+
+  // Pronunciation
+  let pron = 6.0;
+  if (confidence >= 0.9) pron += 1.0;
+  else if (confidence >= 0.8) pron += 0.6;
+  else if (confidence >= 0.7) pron += 0.2;
+  else if (confidence < 0.55) pron -= 0.8;
+  else if (confidence < 0.65) pron -= 0.3;
+  pron = clamp(pron);
+
+  const overall = Math.round(((fluency + lexical + grammar + pron) / 4) * 2) / 2;
+
+  return {
+    wordCount, wpm, durationSec,
+    fillerCount, fillerHits, fillerRatio,
+    ttr, uniqueContent: uniq.size, contentCount: content.length,
+    sentenceCount: sCount, avgSentLen: Math.round(avgLen),
+    linkersUsed, grammarErrors, confidence,
+    scores: {
+      fluency: Math.round(fluency * 2) / 2,
+      lexical: Math.round(lexical * 2) / 2,
+      grammar: Math.round(grammar * 2) / 2,
+      pron: Math.round(pron * 2) / 2
+    },
+    overall
+  };
+}
+
+/* =====================================================
+   RENDER FEEDBACK
+===================================================== */
+function bandColor(b) {
+  if (b >= 7) return '#10B981';
+  if (b >= 6) return '#6D28D9';
+  if (b >= 5.5) return '#F59E0B';
+  return '#EF4444';
+}
+
+function bandLabel(b) {
+  if (b >= 7.5) return 'Xuất sắc — sẵn sàng cho band 7.5+';
+  if (b >= 7) return 'Rất tốt — mục tiêu 7.0 trong tầm tay';
+  if (b >= 6.5) return 'Tốt — đã đạt mục tiêu 6.5!';
+  if (b >= 6) return 'Khá — gần đạt mục tiêu 6.5';
+  if (b >= 5.5) return 'Trung bình — cần luyện thêm';
+  return 'Cần luyện tập nhiều hơn';
+}
+
+function highlightFillers(text) {
+  let html = escapeHtml(text);
+  FILLERS.forEach(f => {
+    const re = new RegExp('\\b(' + f.replace(/\s+/g, '\\s+') + ')\\b', 'gi');
+    html = html.replace(re, '<mark class="filler">$1</mark>');
+  });
+  return html;
+}
+
+function renderFeedback(a, part, index) {
+  const item = SPEAKING[part].questions[index];
+  const s = a.scores;
+  const pct = Math.min(100, (a.overall / 9) * 100);
+
+  // Strengths
+  const strengths = [];
+  if (a.wordCount >= 60) strengths.push(`<strong>Độ dài tốt:</strong> ${a.wordCount} từ — đủ để thể hiện ý tưởng rõ ràng.`);
+  if (a.wpm >= 100 && a.wpm <= 170) strengths.push(`<strong>Tốc độ nói hợp lý:</strong> ${a.wpm} từ/phút — nằm trong khoảng tự nhiên (100–170).`);
+  if (a.fillerRatio < 0.05 && a.wordCount > 20) strengths.push(`<strong>Ít từ đệm:</strong> chỉ ${a.fillerCount} từ đệm — thể hiện sự trôi chảy.`);
+  if (a.linkersUsed.length >= 3) strengths.push(`<strong>Dùng linking words tốt:</strong> ${a.linkersUsed.slice(0, 5).join(', ')}...`);
+  if (a.grammarErrors.length === 0 && a.wordCount > 30) strengths.push(`<strong>Không phát hiện lỗi ngữ pháp phổ biến</strong> trong hệ thống kiểm tra.`);
+  if (a.ttr >= 0.5) strengths.push(`<strong>Từ vựng đa dạng:</strong> ${a.uniqueContent} từ nội dung khác nhau.`);
+  if (strengths.length === 0) strengths.push('Hãy tiếp tục luyện tập — mỗi lần nói là một bước tiến!');
+
+  // Issues
+  const issues = [];
+  if (a.wordCount < 40) {
+    issues.push(`<strong>Trả lời quá ngắn:</strong> chỉ ${a.wordCount} từ. Hãy mở rộng bằng cách thêm lý do và ví dụ.`);
+  }
+  if (a.wpm > 180) {
+    issues.push(`<strong>Nói quá nhanh:</strong> ${a.wpm} từ/phút. Hãy chậm lại để phát âm rõ ràng hơn.`);
+  } else if (a.wpm < 70 && a.wordCount > 20) {
+    issues.push(`<strong>Nói quá chậm:</strong> ${a.wpm} từ/phút. Hãy luyện tăng tốc độ và giảm ngắt quãng.`);
+  }
+  if (a.fillerRatio >= 0.08) {
+    const list = Object.entries(a.fillerHits).sort((x, y) => y[1] - x[1]).slice(0, 3)
+      .map(([f, c]) => `<code>${escapeHtml(f)}</code> (${c})`).join(', ');
+    issues.push(`<strong>Dùng nhiều từ đệm:</strong> ${list}. Hãy thay bằng khoảng lặng ngắn hoặc "well".`);
+  }
+  if (a.linkersUsed.length < 2 && a.wordCount > 30) {
+    issues.push(`<strong>Thiếu linking words:</strong> chỉ dùng ${a.linkersUsed.length} loại. Thêm "because", "however", "for example"...`);
+  }
+  if (a.ttr < 0.4 && a.wordCount > 30) {
+    issues.push(`<strong>Lặp từ nhiều:</strong> độ đa dạng từ vựng thấp (${Math.round(a.ttr * 100)}%). Hãy dùng từ đồng nghĩa.`);
+  }
+  if (a.grammarErrors.length > 0) {
+    a.grammarErrors.slice(0, 3).forEach(g => {
+      issues.push(`<strong>Lỗi ngữ pháp:</strong> <code>${escapeHtml(g.found)}</code> → <code>${escapeHtml(g.fix)}</code> — ${escapeHtml(g.msg)}`);
+    });
+    if (a.grammarErrors.length > 3) {
+      issues.push(`Còn ${a.grammarErrors.length - 3} lỗi ngữ pháp khác.`);
+    }
+  }
+  if (issues.length === 0) issues.push('Không phát hiện vấn đề lớn nào. Tiếp tục phát huy!');
+
+  // Tips
+  const tips = [];
+  if (a.overall < 6.5) {
+    tips.push('Áp dụng công thức <strong>AREA</strong>: Answer – Reason – Example – Alternative. Mỗi câu trả lời nên có ít nhất 2 trong 4 thành phần này.');
+    tips.push('Học thuộc 5–7 cụm <strong>linking words</strong> và dùng tự nhiên: because, however, for example, in addition, so overall...');
+  }
+  if (a.fillerRatio >= 0.05) {
+    tips.push('Khi cần suy nghĩ, hãy dùng cụm như <em>"That\'s an interesting question"</em> hoặc <em>"Let me think for a moment"</em> thay vì "um, uh".');
+  }
+  if (a.ttr < 0.45 && a.wordCount > 30) {
+    tips.push('Mở rộng vốn từ: mỗi ngày học 3 từ đồng nghĩa cho các từ cơ bản (good → beneficial, positive, helpful...).');
+  }
+  if (a.grammarErrors.length > 0) {
+    tips.push('Sau khi nói, hãy <strong>nghe lại bản ghi</strong> và tự sửa lỗi — đây là cách nhanh nhất để tiến bộ.');
+  }
+  tips.push('Nghe lại câu trả lời mẫu (nút "🔊 Nghe mẫu") và so sánh ngữ điệu, trọng âm với bản ghi của bạn.');
+  tips.push('Luyện nói to ít nhất 10 phút mỗi ngày — kiên trì là yếu tố quan trọng nhất.');
+
+  const critNames = {
+    fluency: ['Fluency & Coherence', '#6D28D9'],
+    lexical: ['Lexical Resource', '#F43F5E'],
+    grammar: ['Grammatical Range', '#F59E0B'],
+    pron: ['Pronunciation', '#10B981']
+  };
+
+  const transcriptHtml = highlightFillers(a && a.transcript ? a.transcript : '');
+
+  return `
+    <div class="fb-card">
+      <div class="fb-hero">
+        <div class="band-ring" style="--p:${pct};--c:${bandColor(a.overall)}">
+          <div><b>${a.overall.toFixed(1)}</b><small>Band ước tính</small></div>
+        </div>
+        <div class="fb-hero-text">
+          <h3>${bandLabel(a.overall)}</h3>
+          <p>AI Coach phân tích bài nói dựa trên độ trôi chảy, từ vựng, ngữ pháp và độ tin cậy nhận diện giọng nói. Đây là ước lượng, không phải điểm thi chính thức.</p>
+        </div>
+      </div>
+
+      <div class="crit-grid">
+        ${Object.keys(critNames).map(k => `
+          <div class="crit">
+            <div class="cname">${critNames[k][0]}</div>
+            <div class="cscore" style="color:${critNames[k][1]}">${s[k].toFixed(1)}</div>
+            <div class="cbar"><div class="cfill" style="background:${critNames[k][1]}" data-w="${(s[k] / 9) * 100}%"></div></div>
+          </div>
+        `).join('')}
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-cell"><b>${a.wpm}</b><span>Từ / phút</span></div>
+        <div class="stat-cell"><b>${a.wordCount}</b><span>Số từ</span></div>
+        <div class="stat-cell"><b>${a.fillerCount}</b><span>Từ đệm</span></div>
+        <div class="stat-cell"><b>${a.uniqueContent}</b><span>Từ khác nhau</span></div>
+      </div>
+
+      <div class="fb-section">
+        <h4><span class="ico ico-good">✓</span> Điểm mạnh</h4>
+        <div class="fb-list">
+          ${strengths.map(x => `<div class="fb-item"><span class="bullet b-good">✓</span><div>${x}</div></div>`).join('')}
+        </div>
+      </div>
+
+      <div class="fb-section">
+        <h4><span class="ico ico-warn">!</span> Cần cải thiện</h4>
+        <div class="fb-list">
+          ${issues.map(x => `<div class="fb-item"><span class="bullet b-warn">!</span><div>${x}</div></div>`).join('')}
+        </div>
+      </div>
+
+      <div class="fb-section">
+        <h4><span class="ico ico-info">📝</span> Bản ghi lời nói <span style="font-size:.72rem;font-weight:600;color:var(--muted);margin-left:auto">từ đệm được đánh dấu</span></h4>
+        <div class="transcript-box">${transcriptHtml || '<em style="color:var(--muted)">(không có nội dung)</em>'}</div>
+        ${a.linkersUsed.length > 0 ? `<div style="margin-top:12px;font-size:.8rem;color:var(--muted)"><strong style="color:var(--text)">Linking words đã dùng:</strong> ${a.linkersUsed.map(l => `<code>${escapeHtml(l)}</code>`).join(' ')}</div>` : ''}
+      </div>
+
+      <div class="fb-section">
+        <h4><span class="ico ico-tip">💡</span> Gợi ý luyện tập</h4>
+        <div class="fb-list">
+          ${tips.map(x => `<div class="fb-item"><span class="bullet b-tip">→</span><div>${x}</div></div>`).join('')}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+/* =====================================================
+   PLAY SAMPLE
+===================================================== */
+function playSample(part) {
+  const item = SPEAKING[part].questions[currentIndex[part]];
+  if (!item) return;
+  speakText(item.sample, 0.92);
+  showToast('🔊 Đang phát câu trả lời mẫu...');
+}
+
+function toggleSample(part) {
+  const box = document.getElementById(part + '-sample');
+  if (!box) return;
+  box.classList.toggle('show');
+  if (box.classList.contains('show')) {
+    box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+}
+
+/* =====================================================
+   SAMPLE ITEMS (annotated section)
+===================================================== */
+function toggleSampleItem(id) {
+  const el = document.getElementById(id);
+  if (el) el.classList.toggle('open');
+}
+
+/* =====================================================
+   PHRASE BANK
+===================================================== */
+function switchPhrase(cat) {
+  currentPhraseCat = cat;
+  document.querySelectorAll('.ptab').forEach(t => {
+    t.classList.toggle('active', t.dataset.cat === cat);
+  });
+  const grid = document.getElementById('phraseGrid');
+  grid.innerHTML = PHRASES[cat].map(p => `
+    <div class="phrase-card" onclick="copyPhrase(this)">
+      <span class="copy-hint">NHẤN ĐỂ COPY</span>
+      <div class="en">${escapeHtml(p.en)}</div>
+      <div class="vi">${escapeHtml(p.vi)}</div>
+    </div>
+  `).join('');
+}
+
+function copyPhrase(el) {
+  const en = el.querySelector('.en').textContent;
+  const vi = el.querySelector('.vi').textContent;
+  const full = en + '  (' + vi + ')';
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(full).then(() => showToast('✓ Đã sao chép vào clipboard'))
+      .catch(() => fallbackCopy(full));
+  } else {
+    fallbackCopy(full);
+  }
+}
+
+function fallbackCopy(text) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); showToast('✓ Đã sao chép vào clipboard'); }
+  catch (e) { showToast('⚠️ Không thể sao chép'); }
+  document.body.removeChild(ta);
+}
+
+/* =====================================================
+   PROGRESS
+===================================================== */
+function saveProgress(key, pct) {
+  try {
+    const data = JSON.parse(localStorage.getItem('ieltsSpeakingProgress') || '{}');
+    data[key] = Math.max(data[key] || 0, pct);
+    localStorage.setItem('ieltsSpeakingProgress', JSON.stringify(data));
+    loadProgress();
+  } catch (e) { /* ignore */ }
+}
+
+function loadProgress() {
+  let data = {};
+  try { data = JSON.parse(localStorage.getItem('ieltsSpeakingProgress') || '{}'); } catch (e) {}
+
+  const items = [
+    { key: 'p1', barId: 'bar-p1', pctId: 'pct-p1', heroBar: 'hero-bar-p1', heroPct: 'hero-pct-p1' },
+    { key: 'p2', barId: 'bar-p2', pctId: 'pct-p2', heroBar: 'hero-bar-p2', heroPct: 'hero-pct-p2' },
+    { key: 'p3', barId: 'bar-p3', pctId: 'pct-p3', heroBar: 'hero-bar-p3', heroPct: 'hero-pct-p3' },
+    { key: 'pron', barId: 'bar-pron', pctId: 'pct-pron', heroBar: 'hero-bar-pron', heroPct: 'hero-pct-pron' }
+  ];
+
+  let total = 0;
+  items.forEach(it => {
+    // Band scores are 3.5-9 → map to 0-100
+    const rawVal = data[it.key] || 0;
+    const pct = it.key === 'pron'
+      ? Math.min(100, rawVal)
+      : Math.min(100, Math.round(((rawVal - 3.5) / 5.5) * 100));
+
+    const bar = document.getElementById(it.barId);
+    const label = document.getElementById(it.pctId);
+    if (bar) {
+      bar.style.width = '0%';
+      setTimeout(() => { bar.style.width = pct + '%'; }, 120);
+    }
+    if (label) label.textContent = pct + '% hoàn thành';
+
+    const hBar = document.getElementById(it.heroBar);
+    const hPct = document.getElementById(it.heroPct);
+    if (hBar) {
+      hBar.style.width = '0%';
+      setTimeout(() => { hBar.style.width = pct + '%'; }, 150);
+    }
+    if (hPct) hPct.textContent = pct + '%';
+
+    total += pct;
+  });
+
+  const avg = total / items.length;
+  const band = (5.5 + (avg / 100) * 1.2).toFixed(1);
+  const bandEl = document.getElementById('bandDisplay');
+  const pill = document.getElementById('bandPill');
+
+  if (bandEl) bandEl.textContent = band;
+  if (pill) {
+    if (parseFloat(band) >= 6.5) {
+      pill.textContent = '🎉 Đã đạt mục tiêu 6.5!';
+      pill.style.background = 'var(--green-soft)';
+      pill.style.color = '#065F46';
+    } else {
+      pill.textContent = 'Mục tiêu: 6.5 · Còn ' + (6.5 - parseFloat(band)).toFixed(1) + ' band';
+    }
+  }
+}
+
+/* =====================================================
+   TOAST
+===================================================== */
+let toastTimer = null;
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+/* =====================================================
+   UTILS
+===================================================== */
+function escapeHtml(s) {
+  return String(s || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+/* =====================================================
+   INIT
+===================================================== */
+window.addEventListener('load', () => {
+  // Hero bars
+  document.querySelectorAll('.fill').forEach(el => {
+    if (el.dataset.w) setTimeout(() => { el.style.width = el.dataset.w; }, 300);
+  });
+
+  // Render all questions
+  renderQuestion('p1');
+  renderQuestion('p2');
+  renderQuestion('p3');
+
+  // Phrase bank
+  switchPhrase('opinion');
+
+  // Progress
+  loadProgress();
+
+  // Preload voices
+  if (window.speechSynthesis) {
+    setTimeout(() => { currentVoices = speechSynthesis.getVoices(); }, 300);
+  }
+
+  // Feature detection notice
+  if (!SpeechRecognition) {
+    setTimeout(() => {
+      showToast('⚠️ Trình duyệt không hỗ trợ nhận diện giọng nói. Hãy dùng Chrome hoặc Edge để luyện nói với AI.');
+    }, 1500);
+  }
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function (e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
